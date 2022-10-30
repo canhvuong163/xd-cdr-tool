@@ -2,7 +2,7 @@
     <v-app>
         <div class="main">
             <h1>Hoàn thành chuẩn đầu ra</h1>
-            <p class="font-white">Sao chép và nhúng những thứ sau vào tài liệu của bạn= sao chép và nhúng chuẩn đầu ra đã hoàn thành vào tài liệu của Quý Thầy/Cô.</p>
+            <p class="font-white">Sao chép và nhúng chuẩn đầu ra đã hoàn thành vào tài liệu của Quý Thầy/Cô.</p>
             
 
             <div class="final">
