@@ -3,7 +3,7 @@
         <div class="container">
             <div class="content">
                 <h1>Công cụ xây dựng chuẩn đầu ra</h1>
-                <p>Sử dụng công cụ xây dựng viết các chuẩn đầu ra một cách chính xác, ngắn gọn.</p>
+                <p>Bộ công cụ này hỗ trợ Quý Thầy/Cô xây dựng chuẩn đầu ra một cách chính xác và ngắn gọn.</p>
                 <v-btn @click="onStart">Bắt đầu dự án</v-btn>
             </div>
         </div>
@@ -33,6 +33,8 @@ export default {
     height: 100%;
     width: 100%;
     background-image: url(../assets/img/50-Beautiful-and-Minimalist-Presentation-Backgrounds-03.jpg);
+    //background-color: #004aad;
+    color: white;
 }
 
 .content {

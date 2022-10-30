@@ -1,22 +1,27 @@
 <template>
     <v-app>
         <div class="main">
-            <h1>Bước 3: Mô tả những gì người học sẽ làm</h1>
+            <div class="font-white">
+            <h1>Bước 3: Mô tả chuẩn đầu ra</h1>
+            <p>Mong muốn chuẩn đầu ra một cách hoàn thiện? Đây thường là một danh từ hoặc cụm danh từ. Hãy chắc chắn
+                rằng mô tả chuẩn đầu ra đạt mức độ mong muốn hoặc mức độ hiệu suất có thể chấp nhận được.</p>
+            <p>Khi bạn hài lòng với chuẩn đầu ra, hãy nhấn vào <span style="color: orange">TIẾP TỤC</span>.</p>
+        </div>
 
             <div class="step3">
-                <v-container fluid>
-                    <v-textarea name="input-7-1" filled label="Nhập nội dung của bạn" auto-grow class="input-text" v-bind:value="text" v-on:keyup="text = $event.target.value">
-                        
+                
+                    <v-textarea name="input-7-1" filled label="Nhập nội dung của bạn" auto-grow class="input-text"
+                        v-bind:value="text" v-on:keyup="text = $event.target.value">
+
                     </v-textarea>
-                </v-container>
+                
             </div>
+            <div id="select" class="select">
+                <p>Tại thời điểm kết thúc khóa học/mô -đun, bài học người học có thể:</p>
+                <p>{{ describe }} {{ text }}</p>
 
+            </div>
             <div class="menu-btn-st2">
-                <div id="select" class="select">
-                    <p>Vào cuối khóa học / mô-đun / bài học này, bạn sẽ có thể:</p>
-                    <p>{{ describe }} {{text}}</p>
-
-                </div>
                 <v-btn color="warning" class="btn-back-st2" @click="onBack">Quay về</v-btn>
                 <v-btn color="warning" id="next" class="btn-next" @click="addText">Tiếp tục</v-btn>
             </div>
@@ -47,7 +52,7 @@ export default {
         },
 
         addText() {
-            if(this.text == "") {
+            if (this.text == "") {
                 alert('Vui lòng nhập mô tả')
             }
             else {
@@ -63,19 +68,11 @@ export default {
 <style lang="css">
 .step3 {
     background-color: white;
-    height: 300px;
-}
-
-.select {
-    margin-top: 20px;
-    background-color: coral;
-    height: 100px;
-    width: 92.5%;
-    position: absolute;
-    padding: 20px;
+    height: auto;
 }
 
 .input-text {
-    height: 300px;
+    height: auto;
+    border-radius: 0.5rem;
 }
 </style>

@@ -1,8 +1,9 @@
 <template>
     <v-app>
         <div class="main">
-            <h1>Dự án cuối cùng</h1>
-            <p>Sao chép và dán những thứ sau vào tài liệu của bạn</p>
+            <h1>Hoàn thành chuẩn đầu ra</h1>
+            <p class="font-white">Sao chép và nhúng những thứ sau vào tài liệu của bạn= sao chép và nhúng chuẩn đầu ra đã hoàn thành vào tài liệu của Quý Thầy/Cô.</p>
+            
 
             <div class="final">
                 <p>{{ message }}</p>
@@ -10,9 +11,9 @@
             </div>
 
             <div class="menu">
-                <v-btn color="primary" elevation="2" class="btn-final" @click.stop.prevent="copy">Sao chép đến màn hình
+                <v-btn color="primary" elevation="2" class="btn-final" @click.stop.prevent="copy">Sao chép
                 </v-btn>
-                <v-btn color="primary" elevation="2" class="btn-final" @click="onBack">Tạo dự án mới</v-btn>
+                <v-btn color="primary" elevation="2" class="btn-final" @click="onBack">Tạo mới</v-btn>
             </div>
 
 
@@ -67,10 +68,12 @@ export default {
     height: 300px;
     background-color: white;
     padding: 20px;
+    border-radius: 0.5rem;
 }
 
 .btn-final {
-    width: 250px;
-    margin: 10px;
+    width: 100px;
+    margin: 20px;
+    position: relative;
 }
 </style>

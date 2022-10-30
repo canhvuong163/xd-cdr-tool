@@ -2,20 +2,22 @@
     <v-app>
         <div class="main">
             <h1>Bước 2: Chọn một động từ</h1>
+            <p class="font-white">Chọn một động từ theo chiều nhận thức <strong>Phân tích</strong> phù hợp với chuẩn đầu ra.</p>
 
             <div class="step2">
-                <v-btn color="green lighten-1" class="btn-st2" style="color: white;" @click="onDetermined">Xác định
+                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onDetermined">Xác định
                 </v-btn>
-                <v-btn color="green lighten-1" class="btn-st2" style="color: white;" @click="onInvestigate">Điều tra</v-btn>
-                
-            </div>
+                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onInvestigate">Điều tra
+                </v-btn>
 
+            </div>
+            <div id="select" class="select" style="display: none;">
+                <p>Tại thời điểm kết thúc khóa học/mô -đun, bài học người học có thể:</p>
+                <strong>{{ describe }}...</strong>
+
+            </div>
             <div class="menu-btn-st2">
-                <div id="select" class="select" style="display: none;">
-                    <p>Vào cuối khóa học / mô-đun / bài học này, bạn sẽ có thể:</p>
-                    <strong>{{describe}}...</strong>
-                
-                </div>
+
                 <v-btn color="warning" class="btn-back-st2" @click="onBack">Quay về</v-btn>
                 <v-btn color="warning" id="next" class="btn-next" @click="onNext">Tiếp tục</v-btn>
             </div>
@@ -32,13 +34,13 @@ export default {
 
     data() {
         return {
-            describe: '', 
+            describe: '',
         }
     },
 
     methods: {
         onNext() {
-            if(document.getElementById("select").style.display == "none") {
+            if (document.getElementById("select").style.display == "none") {
                 alert('vui lòng chọn một động từ để tiếp tục')
             }
             else {
@@ -47,12 +49,12 @@ export default {
         },
 
         onDetermined() {
-            document.getElementById("select").style.display="block"
+            document.getElementById("select").style.display = "block"
             this.describe = "Xác định"
         },
 
         onInvestigate() {
-            document.getElementById("select").style.display="block"
+            document.getElementById("select").style.display = "block"
             this.describe = "Điều tra"
         },
 
@@ -64,4 +66,5 @@ export default {
 </script>
 
 <style lang="css">
+
 </style>
