@@ -119,9 +119,7 @@ export default {
 <style lang="css">
 .main {
     position: relative;
-    padding-top: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border: thin solid rgba(84, 84, 87, 0.25);
     background-color: #004aad;
@@ -136,7 +134,7 @@ export default {
 }
 
 .btn {
-    width: 100px;
+    width: 117px;
     margin-right: auto;
     margin-top: 20px;
 }

@@ -73,7 +73,7 @@ export default {
 
 .btn-final {
     width: 100px;
-    margin: 20px;
+    margin: 20px 40px;
     position: relative;
 }
 </style>

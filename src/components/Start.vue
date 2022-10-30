@@ -33,7 +33,6 @@ export default {
     height: 100%;
     width: 100%;
     background-image: url(../assets/img/50-Beautiful-and-Minimalist-Presentation-Backgrounds-03.jpg);
-    //background-color: #004aad;
     color: white;
 }
 

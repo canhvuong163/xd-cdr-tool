@@ -93,6 +93,7 @@ export default {
     background-color: white;
     height: auto;
     border-radius: 0.5rem;
+    padding: 30px;
 }
 
 .btn-st2 {
