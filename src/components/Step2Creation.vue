@@ -2,20 +2,16 @@
     <v-app>
         <div class="main">
             <h1>Bước 2: Chọn một động từ</h1>
-            <p class="font-white">Chọn một động từ theo chiều nhận thức <strong>Sáng tạo</strong> phù hợp với chuẩn đầu ra.</p>
+            <p class="font-white">Chọn một động từ theo chiều nhận thức <strong style="color: orange;">SÁNG TẠO</strong> phù hợp với chuẩn đầu ra.</p>
 
             <div class="step2">
-                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onPlanning">Lập kế hoạch
-                </v-btn>
-                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onInvention">Phát minh
-                </v-btn>
-                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onComposed">Sáng tác
-                </v-btn>
-                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onDesign">Thiết kế</v-btn>
-                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onBuild">Xây dựng
-                </v-btn>
-                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onSynthetic">Tổng hợp
-                </v-btn>
+                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onDanhgia">Đánh giá</v-btn>
+                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onTranhluan">Tranh luận</v-btn>
+                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onXacdinh">Xác định</v-btn>
+                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onLuachon">Lựa chọn</v-btn>
+                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onHotro">Hỗ trợ</v-btn>
+                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onPhebinh">Phê bình</v-btn>
+                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onCannhac">Cân nhắc</v-btn>
             </div>
             <div id="select" class="select" style="display: none;">
                 <p>Tại thời điểm kết thúc khóa học/mô -đun, bài học người học có thể:</p>
@@ -41,6 +37,7 @@ export default {
     data() {
         return {
             describe: '',
+            dataBack:'creation'
         }
     },
 
@@ -51,37 +48,43 @@ export default {
             }
             else {
                 this.$emit("onNext", this.describe)
+                this.$emit("dataBack", this.dataBack)
             }
         },
 
-        onPlanning() {
+        onDanhgia() {
             document.getElementById("select").style.display = "block"
-            this.describe = "Lập kế hoạch"
+            this.describe = "Đánh giá"
         },
 
-        onInvention() {
+        onTranhluan() {
             document.getElementById("select").style.display = "block"
-            this.describe = "Phát minh"
+            this.describe = "Tranh luận"
         },
 
-        onComposed() {
+        onXacdinh() {
             document.getElementById("select").style.display = "block"
-            this.describe = "Sáng tác"
+            this.describe = "Xác định"
         },
 
-        onDesign() {
+        onLuachon() {
             document.getElementById("select").style.display = "block"
-            this.describe = "Thiết kế"
+            this.describe = "Lựa chọn"
         },
 
-        onBuild() {
+        onHotro() {
             document.getElementById("select").style.display = "block"
-            this.describe = "Xây dựng"
+            this.describe = "Hỗ trợ"
         },
 
-        onSynthetic() {
+        onPhebinh() {
             document.getElementById("select").style.display = "block"
-            this.describe = "Tổng hợp"
+            this.describe = "Phê bình"
+        },
+
+        onCannhac() {
+            document.getElementById("select").style.display = "block"
+            this.describe = "Cân nhắc"
         },
 
         onBack() {

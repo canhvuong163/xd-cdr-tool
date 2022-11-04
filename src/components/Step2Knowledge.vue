@@ -2,18 +2,18 @@
     <v-app>
         <div class="main">
             <h1>Bước 2: Chọn một động từ</h1>
-            <p class="font-white">Chọn một động từ theo chiều nhận thức <strong>Hiểu biết</strong> phù hợp với chuẩn đầu ra.</p>
+            <p class="font-white">Chọn một động từ theo chiều nhận thức <strong style="color: orange;">HIỂU</strong> phù hợp với chuẩn đầu ra.</p>
 
             <div class="step2">
-                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onExplain">Giải thích
-                </v-btn>
-                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onCompare">So sánh</v-btn>
-                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onDiscussion">Thảo luận
-                </v-btn>
-                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onGuess">Dự đoán</v-btn>
-                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onSummary">Tóm tắt
-                </v-btn>
-                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onRewrite">Viết lại</v-btn>
+                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onPhanloai">Phân loại</v-btn>
+                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onMota">Mô tả</v-btn>
+                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onThaoluan">Thảo luận</v-btn>
+                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onGiaithich">Giải thích</v-btn>
+                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onXacdinh">Xác định</v-btn>
+                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onBaocao">Báo cáo</v-btn>
+                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onNhanbiet">Nhận biết</v-btn>
+                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onLuachon">Lựa chọn</v-btn>
+               
             </div>
             <div id="select" class="select" style="display: none;">
                 <p>Tại thời điểm kết thúc khóa học/mô -đun, bài học người học có thể:</p>
@@ -39,6 +39,7 @@ export default {
     data() {
         return {
             describe: '',
+            dataBack:'knowledge'
         }
     },
 
@@ -49,37 +50,48 @@ export default {
             }
             else {
                 this.$emit("onNext", this.describe)
+                this.$emit("dataBack", this.dataBack)
             }
         },
 
-        onExplain() {
+        onPhanloai() {
             document.getElementById("select").style.display = "block"
-            this.describe = "Giải thích"
+            this.describe = "Phân loại"
         },
 
-        onCompare() {
+        onMota() {
             document.getElementById("select").style.display = "block"
-            this.describe = "So sánh"
+            this.describe = "Mô tả"
         },
 
-        onDiscussion() {
+        onThaoluan() {
             document.getElementById("select").style.display = "block"
             this.describe = "Thảo luận"
         },
 
-        onGuess() {
+        onGiaithich() {
             document.getElementById("select").style.display = "block"
-            this.describe = "Dự đoán"
+            this.describe = "Giải thích"
         },
 
-        onSummary() {
+        onXacdinh() {
             document.getElementById("select").style.display = "block"
-            this.describe = "Tóm tắt"
+            this.describe = "Xác định"
         },
 
-        onRewrite() {
+        onBaocao() {
             document.getElementById("select").style.display = "block"
-            this.describe = "Viết lại"
+            this.describe = "Báo cáo"
+        },
+
+        onNhanbiet() {
+            document.getElementById("select").style.display = "block"
+            this.describe = "Nhận biết"
+        },
+
+        onLuachon() {
+            document.getElementById("select").style.display = "block"
+            this.describe = "Lựa chọn"
         },
 
         onBack() {

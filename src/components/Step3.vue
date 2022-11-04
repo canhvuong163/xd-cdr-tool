@@ -34,7 +34,8 @@
 export default {
     name: 'CompStep3',
     props: {
-        describe: String
+        describe: String,
+        databack: String
     },
     components: {
     },
@@ -48,7 +49,7 @@ export default {
 
     methods: {
         onBack() {
-            this.$emit("onBack")
+            this.$emit("onBack", this.databack)
         },
 
         addText() {

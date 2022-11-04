@@ -2,13 +2,18 @@
     <v-app>
         <div class="main">
             <h1>Bước 2: Chọn một động từ</h1>
-            <p class="font-white">Chọn một động từ theo chiều nhận thức <strong>Phân tích</strong> phù hợp với chuẩn đầu ra.</p>
+            <p class="font-white">Chọn một động từ theo chiều nhận thức <strong style="color: orange;">PHÂN TÍCH</strong> phù hợp với chuẩn đầu ra.</p>
 
             <div class="step2">
-                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onDetermined">Xác định
-                </v-btn>
-                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onInvestigate">Điều tra
-                </v-btn>
+                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onPhanbiet">Phân biệt</v-btn>
+                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onTochuc">Tổ chức</v-btn>
+                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onLienhe">Liên hệ</v-btn>
+                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onSosanh">So sánh</v-btn>
+                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onDoichieu">Đối chiếu</v-btn>
+                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onKiemtra">Kiểm tra</v-btn>
+                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onThunghiem">Thử nghiệm</v-btn>
+                <v-btn color="#008037" class="btn-st2" style="color: white;" @click="onDatcauhoi">Đặt câu hỏi</v-btn>
+               
 
             </div>
             <div id="select" class="select" style="display: none;">
@@ -35,6 +40,7 @@ export default {
     data() {
         return {
             describe: '',
+            dataBack: ''
         }
     },
 
@@ -45,17 +51,48 @@ export default {
             }
             else {
                 this.$emit("onNext", this.describe)
+                this.$emit("dataBack", this.dataBack)
             }
         },
 
-        onDetermined() {
+        onPhanbiet() {
             document.getElementById("select").style.display = "block"
-            this.describe = "Xác định"
+            this.describe = "Phân biệt"
         },
 
-        onInvestigate() {
+        onTochuc() {
             document.getElementById("select").style.display = "block"
-            this.describe = "Điều tra"
+            this.describe = "Tổ chức"
+        },
+
+        onLienhe() {
+            document.getElementById("select").style.display = "block"
+            this.describe = "Liên hệ"
+        },
+
+        onSosanh() {
+            document.getElementById("select").style.display = "block"
+            this.describe = "So sánh"
+        },
+
+        onDoichieu() {
+            document.getElementById("select").style.display = "block"
+            this.describe = "Đối chiếu"
+        },
+
+        onKiemtra() {
+            document.getElementById("select").style.display = "block"
+            this.describe = "Kiểm trea"
+        },
+
+        onThunghiem() {
+            document.getElementById("select").style.display = "block"
+            this.describe = "thử nghiệm"
+        },
+
+        onDatcauhoi() {
+            document.getElementById("select").style.display = "block"
+            this.describe = "Đặt câu hỏi"
         },
 
         onBack() {

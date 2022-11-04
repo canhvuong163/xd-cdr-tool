@@ -2,17 +2,16 @@
     <v-app>
         <div class="main">
             <h1>Bước 2: Chọn một động từ</h1>
-            <p class="font-white">Chọn một động từ theo chiều nhận thức <strong>Đánh giá</strong> phù hợp với chuẩn đầu ra.</p>
+            <p class="font-white">Chọn một động từ theo chiều nhận thức <strong style="color: orange;">ĐÁNH GIÁ</strong> phù hợp với chuẩn đầu ra.</p>
 
             <div class="step2">
-                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onWatchLightning">Xem sét
-                </v-btn>
-                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onEvaluate">Đánh giá</v-btn>
-                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onPrioritize">Xếp ưu tiên
-                </v-btn>
-                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onOffer">Đề xuất</v-btn>
-                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onRating">Phân hạng
-                </v-btn>
+                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onDanhgia">Đánh giá</v-btn>
+                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onTranhluan">Tranh luận</v-btn>
+                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onXacdinh">Xác định</v-btn>
+                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onLuachon">Lựa chọn</v-btn>
+                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onHotro">Hỗ trợ</v-btn>
+                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onPhebinh">Phê bình</v-btn>
+                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onCannhac">Cân nhắc</v-btn>
             </div>
             <div id="select" class="select" style="display: none;">
                 <p>Tại thời điểm kết thúc khóa học/mô -đun, bài học người học có thể:</p>
@@ -38,6 +37,7 @@ export default {
     data() {
         return {
             describe: '',
+            dataBack:'evaluate'
         }
     },
 
@@ -48,32 +48,50 @@ export default {
             }
             else {
                 this.$emit("onNext", this.describe)
+                this.$emit("dataBack", this.dataBack)
             }
         },
 
-        onWatchLightning() {
-            document.getElementById("select").style.display = "block"
-            this.describe = "Xem sét"
-        },
-
-        onEvaluate() {
+        onDanhgia() {
             document.getElementById("select").style.display = "block"
             this.describe = "Đánh giá"
+            // <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onDanhgia">Đánh giá</v-btn>
+            //     <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onTranhluan">Tranh luận</v-btn>
+            //     <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onXacdinh">Xác định</v-btn>
+            //     <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onLuachon">Lựa chọn</v-btn>
+            //     <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onHotro">Hỗ trợ</v-btn>
+            //     <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onPhebinh">Phê bình</v-btn>
+            //     <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onCannhac">Cân nhắc</v-btn>
         },
 
-        onPrioritize() {
+        onTranhluan() {
             document.getElementById("select").style.display = "block"
-            this.describe = "Xếp ưu tiên"
+            this.describe = "Tranh luận"
         },
 
-        onOffer() {
+        onXacdinh() {
             document.getElementById("select").style.display = "block"
-            this.describe = "Đề xuất"
+            this.describe = "Xác định"
         },
 
-        onRating() {
+        onLuachon() {
             document.getElementById("select").style.display = "block"
-            this.describe = "Phân hạng"
+            this.describe = "Lựa chọn"
+        },
+
+        onHotro() {
+            document.getElementById("select").style.display = "block"
+            this.describe = "Hỗ trợ"
+        },
+
+        onPhebinh() {
+            document.getElementById("select").style.display = "block"
+            this.describe = "Phê bình"
+        },
+
+        onCannhac() {
+            document.getElementById("select").style.display = "block"
+            this.describe = "Cân nhắc"
         },
 
         onBack() {

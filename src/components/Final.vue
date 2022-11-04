@@ -65,7 +65,7 @@ export default {
 
 <style lang="css">
 .final {
-    height: 300px;
+    height: auto;
     background-color: white;
     padding: 20px;
     border-radius: 0.5rem;

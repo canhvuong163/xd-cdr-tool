@@ -2,18 +2,14 @@
     <v-app>
         <div class="main">
             <h1>Bước 2: Chọn một động từ</h1>
-            <p class="font-white">Chọn một động từ theo chiều nhận thức <strong>Ghi nhớ</strong> phù hợp với chuẩn đầu ra.</p>
+            <p class="font-white">Chọn một động từ theo chiều nhận thức <strong style="color: orange;">GHI NHỚ</strong> phù hợp với chuẩn đầu ra.</p>
 
             <div class="step2">
-                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onDescribe">Mô tả
-                </v-btn>
-                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onSetName">Đặt tên</v-btn>
-                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onSearch">Tìm kiếm
-                </v-btn>
-                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onListed">Liệt kê</v-btn>
-                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onContact">Liên hệ
-                </v-btn>
-                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onPresent">Trình bày</v-btn>
+                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onDinhnghia">Định nghĩa</v-btn>
+                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onSaochep">Sao chép</v-btn>
+                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onLietke">Liệt kê</v-btn>
+                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onGhinho">Ghi nhớ</v-btn>
+                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onLaplai">Lặp lại</v-btn>
             </div>
             <div id="select" class="select" style="display: none;">
                     <p>Tại thời điểm kết thúc khóa học/mô -đun, bài học người học có thể:</p>
@@ -37,7 +33,8 @@ export default {
 
     data() {
         return {
-            describe: '', 
+            describe: '',
+            dataBack:'memorize'
         }
     },
 
@@ -48,37 +45,38 @@ export default {
             }
             else {
                 this.$emit("onNext", this.describe)
+                this.$emit("dataBack", this.dataBack)
             }
         },
-
-        onSetName() {
+      
+        onPresent() {
             document.getElementById("select").style.display="block"
-            this.describe = "Đặt tên"
+            this.describe = "Trình bày"
         },
 
-        onDescribe() {
+        onDinhnghia() {
             document.getElementById("select").style.display="block"
-            this.describe = "Mô tả"
+            this.describe = "Định nghĩa"
         },
 
-        onSearch() {
+        onSaochep() {
             document.getElementById("select").style.display="block"
-            this.describe = "Tìm kiếm"
+            this.describe = "Sao chép"
         },
 
-        onListed() {
+        onLietke() {
             document.getElementById("select").style.display="block"
             this.describe = "Liệt kê"
         },
 
-        onContact() {
+        onGhinho() {
             document.getElementById("select").style.display="block"
-            this.describe = "Liên hệ"
+            this.describe = "Ghi nhớ"
         },
 
-        onPresent() {
+        onLaplai() {
             document.getElementById("select").style.display="block"
-            this.describe = "Trình bày"
+            this.describe = "Lặp lại"
         },
 
         onBack() {
@@ -93,7 +91,7 @@ export default {
     background-color: white;
     height: auto;
     border-radius: 0.5rem;
-    padding: 30px;
+    padding-left: auto;
 }
 
 .btn-st2 {

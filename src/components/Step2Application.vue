@@ -2,20 +2,17 @@
     <v-app>
         <div class="main">
             <h1>Bước 2: Chọn một động từ</h1>
-            <p class="font-white">Chọn một động từ theo chiều nhận thức <strong>Áp dụng</strong> phù hợp với chuẩn đầu ra.</p>
+            <p class="font-white">Chọn một động từ theo chiều nhận thức <strong style="color: orange;">ÁP DỤNG</strong> phù hợp với chuẩn đầu ra.</p>
 
             <div class="step2">
-                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onUse">Sử dụng
-                </v-btn>
-                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onComplete">Hoàn thành
-                </v-btn>
-                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onTest">Kiểm tra
-                </v-btn>
-                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onIllustration">Minh họa
-                </v-btn>
-                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onClassify">Phân loại
-                </v-btn>
-                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onHandle">Giải quyết</v-btn>
+                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onThuchien">Thực hiện</v-btn>
+                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onGiaiquyet">Giải quyết</v-btn>
+                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onSudung">Sử dụng</v-btn>
+                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onChungminh">Chứng minh</v-btn>
+                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onDiengiai">Diễn giải</v-btn>
+                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onVanhanh">Vận hành</v-btn>
+                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onLenlich">Lên lịch</v-btn>
+                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onPhacthao">Phác thảo</v-btn>
             </div>
             <div id="select" class="select" style="display: none;">
                 <p>Tại thời điểm kết thúc khóa học/mô -đun, bài học người học có thể:</p>
@@ -41,6 +38,7 @@ export default {
     data() {
         return {
             describe: '',
+            dataBack: "application"
         }
     },
 
@@ -51,37 +49,48 @@ export default {
             }
             else {
                 this.$emit("onNext", this.describe)
+                this.$emit("dataBack", this.dataBack)
             }
         },
 
-        onUse() {
+        onThuchien() {
+            document.getElementById("select").style.display = "block"
+            this.describe = "Thực hiện"
+        },
+
+        onGiaiquyet() {
+            document.getElementById("select").style.display = "block"
+            this.describe = "Giải quyết"
+        },
+
+        onSudung() {
             document.getElementById("select").style.display = "block"
             this.describe = "Sử dụng"
         },
 
-        onComplete() {
+        onChungminh() {
             document.getElementById("select").style.display = "block"
-            this.describe = "Hoàn thành"
+            this.describe = "Chứng minh"
         },
 
-        onTest() {
+        onDiengiai() {
             document.getElementById("select").style.display = "block"
-            this.describe = "Kiểm tra"
+            this.describe = "Diễn giải"
         },
 
-        onIllustration() {
+        onVanhanh() {
             document.getElementById("select").style.display = "block"
-            this.describe = "Minh họa"
+            this.describe = "Vận hành"
         },
 
-        onClassify() {
+        onLenlich() {
             document.getElementById("select").style.display = "block"
-            this.describe = "Phân loại"
+            this.describe = "Lên lịch"
         },
 
-        onHandle() {
+        onPhacthao() {
             document.getElementById("select").style.display = "block"
-            this.describe = "Giải quyết"
+            this.describe = "Phác thảo"
         },
 
         onBack() {

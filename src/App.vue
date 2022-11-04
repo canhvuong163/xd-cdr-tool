@@ -13,31 +13,38 @@
   <Step2Memorize v-else-if="statusMath === 'memorize'"
     @onBack="begin"
     @onNext="next"
+    @dataBack="dataBack"
   />
   <Step2Knowledge v-else-if="statusMath === 'knowledge'"
     @onBack="begin"
     @onNext="next"
+    @dataBack="dataBack"
   />
   <Step2Application v-else-if="statusMath === 'application'"
     @onBack="begin"
     @onNext="next"
+    @dataBack="dataBack"
   />
   <Step2Analysis v-else-if="statusMath === 'analysis'"
     @onBack="begin"
     @onNext="next"
+    @dataBack="dataBack"
   />
   <Step2Evaluate v-else-if="statusMath === 'evaluate'"
     @onBack="begin"
     @onNext="next"
+    @dataBack="dataBack"
   />
   <Step2Creation v-else-if="statusMath === 'creation'"
     @onBack="begin"
     @onNext="next"
+    @dataBack="dataBack"
   />
   <Step3 v-else-if="statusMath === 'next'"
-    @onBack="memorize"
+    @onBack="dlback"
     @onFinal="final"
     :describe="describe"
+    :databack="databack"
   />
 
   <Final v-else-if="statusMath === 'final'"
@@ -81,11 +88,32 @@ export default {
     return {
       statusMath: "default",
       describe: this.describe,
-      message: this.message
+      message: this.message,
+      databack: this.databack
     }
   },
 
   methods: {
+
+    dlback(data){
+      if(data=="memorize")
+        this.statusMath="memorize"
+      else if(data=="knowledge")
+        this.statusMath="knowledge"
+      else if(data=="evaluate")
+        this.statusMath="evaluate"
+      else if(data=="creation")
+        this.statusMath="creation"
+      else if(data=="application")
+        this.statusMath="application"
+      else
+        this.statusMath="analysis"
+    },
+
+    dataBack(data) {
+      this.databack = data
+    },
+
     final(data) {
       this.statusMath = "final"
       this.message = data

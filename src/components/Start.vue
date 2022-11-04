@@ -17,9 +17,6 @@ export default {
     components: {
     },
 
-    data: () => ({
-        //
-    }),
     methods: {
         onStart() {
             this.$emit("onStart")
@@ -32,8 +29,8 @@ export default {
 .container {
     height: 100%;
     width: 100%;
-    background-image: url(../assets/img/50-Beautiful-and-Minimalist-Presentation-Backgrounds-03.jpg);
     color: white;
+    background-color: #004aad;
 }
 
 .content {
@@ -42,7 +39,7 @@ export default {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border: thin solid rgba(84, 84, 87, 0.25);
     text-align: center;
-    margin-top: 200px;
+    margin-top: 250px;
     background-color: rgba(0, 183, 255, 0.377);
 }
 </style>
