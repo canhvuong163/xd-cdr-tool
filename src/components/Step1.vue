@@ -30,11 +30,9 @@
                 <div class="menu-btn-st1">
                     <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onSangtao1">Sáng tạo</v-btn>
                     <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onThichung">Thích ứng</v-btn>
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onHoanthanhtd">Hoàn thành tự
-                        động</v-btn>
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onHoanthanhtd">Hoàn thành</v-btn>
                     <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onKyxao">Kỹ xảo</v-btn>
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onPhanhoicohd">Phản hồi có
-                        hưỡng dẫn</v-btn>
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onPhanhoicohd">Phản hồi</v-btn>
                     <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onThietlap">Thiết lập</v-btn>
                     <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onNhanthuc">Nhận thức</v-btn>
                 </div>
@@ -91,15 +89,15 @@ export default {
         },
         //Mien nhan thuc
         onSangtao() {
-            this.dataSend = ["Tích hợp", "Phát minh", "Chế tạo", "Diều hành", "Sửa đổi", "Lập kế hoạch", "Tạo ra", "Đề xuất", "Viết lại", "Tập hợp",
-                "Kết hợp", "Sáng tác", "Xây dựng", "Sáng tạo", "Thiết kế", "Phát triển", "Đề ra"]
+            this.dataSend = ["Tích hợp", "Phát minh", "Chế tạo", "Điều hành", "Sửa đổi", "Lập kế hoạch", "Tạo ra", "Đề xuất",
+             "Viết lại", "Tập hợp", "Kết hợp", "Sáng tác", "Xây dựng", "Sáng tạo", "Thiết kế", "Phát triển", "Đề ra"]
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Sáng tạo"
             this.$emit("mien", this.mien)
         },
 
         onDanhgia() {
-            this.dataSend = ["Nhận định", "Chứng minh", "Xếp hạng", "Đề xuất", "Lựa chọn", "Xác nhận", "Kiểm tra", "Định giá", "Tranh luận", "Quyết định",
+            this.dataSend = ["Nhận định", "Chứng minh", "Xếp hạng", "Lựa chọn", "Xác nhận", "Kiểm tra", "Định giá", "Tranh luận", "Quyết định",
                 "Thuyết phục", "Bình phẩm", "Bình luận", "Biện hộ", "Phân biệt", "Ước lượng", "Đánh giá"]
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Đánh giá"
@@ -107,23 +105,23 @@ export default {
         },
 
         onPhantich() {
-            this.dataSend = ["Phân biệt", "Kiểm tra", "Xem xét", "Hệ thống hóa", "Phác thảo", "Nghiên cứu", "Lựa chọn", "Phân biệt", "Đơn giản hóa", "Phân tích",
-                "Đánh giá", "Phân chia ra", "Phân loại", "So sánh", "Đối chiếu", "Xây dựng", "Phân biệt", "Biểu đồ"]
+            this.dataSend = ["Xem xét", "Hệ thống hóa", "Phác thảo", "Nghiên cứu", "Đơn giản hóa", "Phân tích",
+            "Phân chia ra", "Phân loại", "So sánh", "Đối chiếu", "Biểu đồ"]
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Phân tích"
             this.$emit("mien", this.mien)
         },
 
         onApdung() {
-            this.dataSend = ["Vận dụng", "Tính toán", "Thay đổi", "Phân loại", "Biên soạn", "Tính toán", "Xây dựng", "Chứng minh", "Làm thí nghiệm", "Thực hiện",
-                "Vận dụng", "Vẽ sơ đồ", "Dự đoán", "Trình bày", "Thuận lại", "Chỉ ra", "Giải quyết"]
+            this.dataSend = ["Vận dụng", "Tính toán", "Thay đổi", "Biên soạn", "Làm thí nghiệm", "Thực hiện",
+            "Vẽ sơ đồ", "Dự đoán", "Trình bày", "Thuận lại", "Chỉ ra", "Giải quyết"]
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Áp dụng"
             this.$emit("mien", this.mien)
         },
 
         onHieu() {
-            this.dataSend = ["Liên kết", "So sánh", "Thảo luận", "Phân biệt", "Ước lượng", "Giải thích", "Diễn đạt", "Mở rộng", "Minh họa", "Chỉ ra",
+            this.dataSend = ["Liên kết", "Thảo luận", "Diễn đạt", "Mở rộng", "Minh họa",
                 "Suy luận", "Giải thích", "Diễn giải", "Thuật lại", "Phát biểu lại", "Tóm tắt"]
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Hiểu"
@@ -131,8 +129,8 @@ export default {
         },
 
         onGhinho() {
-            this.dataSend = ["Sắp xếp", "Xác định", "Miêu tả", "Vẽ", "Lặp lại", "Tìm ra", "Nhận ra", "Liệt kế", "Sắp xếp", "Gọi tên",
-                "Trích dẫn", "Nhớ lại", "Nhắc lại", "Phục hồi", "Tiến trình", "Chỉ ra", "Nói", "Viết"]
+            this.dataSend = ["Sắp xếp", "Xác định", "Miêu tả", "Vẽ", "Lặp lại", "Tìm ra", "Nhận ra", "Liệt kế", "Gọi tên",
+                "Trích dẫn", "Nhớ lại", "Nhắc lại", "Phục hồi", "Tiến trình", "Nói", "Viết"]
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Ghi nhớ"
             this.$emit("mien", this.mien)
@@ -141,31 +139,32 @@ export default {
         },
         //Mien ky nang
         onSangtao1() {
-            this.dataSend = ["Sắp xếp", "Lập công thức", "Xây, đặt", "Khởi sướng", "Kết hợp", "Sáng tác", "Sửa đổi", "Thiết lập", "Phát minh", "Thiết kế lại", "Thiết kế", "Sắp xếp lại", "Sáng tạo", "Giải quyết vẫn đề"]
+            this.dataSend = ["Lập công thức", "Xây", "Đặt", "Khởi sướng", "Kết hợp", "Sửa đổi", "Thiết lập", "Phát minh", "Thiết kế lại",
+            "Thiết kế", "Sắp xếp lại", "Giải quyết vẫn đề"]
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Sáng tạo (Miền kỹ năng)"
             this.$emit("mien", this.mien)
         },
 
         onThichung() {
-            this.dataSend = ["Thích ứng", "Điều chỉnh", "Duyệt lại", "Sửa đổi", "Cải tổ", "Thay đổi"]
+            this.dataSend = ["Thích ứng", "Điều chỉnh", "Duyệt lại", "Cải tổ", "Thay đổi"]
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Thích ứng"
             this.$emit("mien", this.mien)
         },
 
         onHoanthanhtd() {
-            this.dataSend = ["Hành động thành thói quen", "Thu thập", "Cải tiến", "Xây dựng", "Kiểm soát", "Xác định", "Đạo diễn", "Hoàn thành", "Nổi trội", "Dựng",
-                "Hưỡng dẫn", "Tháo", "Duy trì hiệu quả", "Hiển thị", "Quản lí", "Thành thạo", "Sửa chữa", "Tổ chức","Xay, tán","Làm cho hoàn thiện","Làm nóng","Thao tác thuần thục",
-                "Thao tác khéo léo","Tiến hành","Tính toán","Đo lường","Chỉnh sửa","Phác thảo"]
+            this.dataSend = ["Hành động thành thói quen", "Thu thập", "Cải tiến", "Kiểm soát", "Xác định", "Đạo diễn", "Hoàn thành", "Nổi trội", "Dựng",
+                "Hướng dẫn", "Tháo", "Duy trì hiệu quả", "Hiển thị", "Quản lí", "Thành thạo", "Sửa chữa", "Tổ chức","Xay", "Tán", "Làm cho hoàn thiện", "Làm nóng","Thao tác thuần thục",
+                "Thao tác khéo léo","Tiến hành","Đo lường","Chỉnh sửa"]
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Hoàn thành tự động"
             this.$emit("mien", this.mien)
         },
 
         onKyxao() {
-            this.dataSend = ["Hoàn thiện", "Lắp ráp", "Chứng minh", "Xác định", "Vận hành", "Hoàn thiện", "Cải thiện", "Tăng tốc", "Hiển thị", "Kiểm soát tốc độ",
-                "Gán cho", "Thực hành", "Tạo hình", "Cải tiến"]
+            this.dataSend = ["Lắp ráp", "Chứng minh", "Vận hành", "Hoàn thiện", "Cải thiện", "Tăng tốc", "Kiểm soát tốc độ",
+                "Gán cho", "Thực hành", "Tạo hình"]
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Kỹ xảo"
             this.$emit("mien", this.mien)
@@ -174,7 +173,7 @@ export default {
 
         onPhanhoicohd() {
             this.dataSend = ["Sao chép", "Nhân bản", "Hoàn thành", "Thực hiện", "Thể hiện", "Mô phỏng", "Thao tác theo hưỡng dẫn", "Vận hành có giám sát", "Thuật lại", "Thử nghiệm",
-                "Lắp ráp", "Xây dựng", "Đáp lại"]
+                "Xây dựng", "Đáp lại"]
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Phản hồi có hưỡng dẫn"
             this.$emit("mien", this.mien)
@@ -182,7 +181,7 @@ export default {
         },
 
         onThietlap() {
-            this.dataSend = ["Sắp xếp", "Khởi đầu", "Giải thích", "Di chuyển", "Chuẩn bị", "Thực hành", "Tác động", "Tuyên bố", "Tự nguyện", "Trả lời"]
+            this.dataSend = ["Sắp xếp", "Khởi đầu","Di chuyển", "Chuẩn bị", "Tác động", "Tuyên bố", "Tự nguyện", "Trả lời"]
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Thiết lập"
             this.$emit("mien", this.mien)
@@ -190,7 +189,7 @@ export default {
         },
 
         onNhanthuc() {
-            this.dataSend = ["Phát hiện ra", "Chọn lựa", "Lắng nghe", "Miêu tả", "Nghe thấy", "Phân biệt", "Quan sát", "Phân biệt", "Cảm thụ", "Cảm nhận",
+            this.dataSend = ["Phát hiện ra", "Lắng nghe", "Miêu tả", "Nghe thấy", "Quan sát", "Phân biệt", "Cảm thụ", "Cảm nhận",
                 "Nhận ra", "Xác định", "Xem sét", "Tách", "Nhận biết", "Quan sát thấy", "Chọn lựa"]
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Nhận thức"
@@ -198,37 +197,37 @@ export default {
         },
         //Mien thai do
         onCanhanhoa() {
-            this.dataSend = ["Đóng vai, hành động", "Tán thành, chủ trương", "Thê hiện quan điểm", "Bảo vệ", "Thể hiện, minh họa", "Thể hiện minh họa bằng ví dụ thực tế", "Tạo ảnh hưởng linh hoạt", "Điều chỉnh hành vi", "Sửa đổi, điều chỉnh", "Cống hiến, tận tụy",
-                "Nội hóa, chủ quan hóa, có chủ kiến", "Rà soát", "Quản lý", "Giải quyết vẫn đề", "Làm sáng tỏ vẫn đề"]
+            this.dataSend = ["Đóng vai", "Hành động", "Tán thành","Chủ trương", "Thể hiện quan điểm", "Bảo vệ", "Thể hiện"," Minh họa", "Thể hiện minh họa bằng ví dụ thực tế", "Tạo ảnh hưởng linh hoạt", "Điều chỉnh hành vi", "Sửa đổi","Điều chỉnh", "Cống hiến", "Tận tụy",
+                "Nội hóa","Chủ quan hóa","Có chủ kiến", "Rà soát", "Quản lý", "Giải quyết vẫn đề", "Làm sáng tỏ vẫn đề"]
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Cá nhân hóa"
             this.$emit("mien", this.mien)
         },
 
         onTochuc() {
-            this.dataSend = ["Linh hoạt, thích ứng", "Điều chỉnh", "Phân loại", "Bảo vệ", "Hình thành", "Thảo luận", "Hệ thống hóa", "Tổng hợp", "Thay thế", "kết hợp",
-                "So sánh", "Khái quát hóa", "Tích hợp", "Điều chỉnh"]
+            this.dataSend = ["Linh hoạt", "Thích ứng", "Phân loại", "Hình thành", "Thảo luận", "Hệ thống hóa", "Tổng hợp", "Thay thế", "Kết hợp",
+                "So sánh", "Khái quát hóa", "Tích hợp"]
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Tổ chức"
             this.$emit("mien", this.mien)
         },
 
         onNhangiatri() {
-            this.dataSend = ["Cam kết", "Chứng minh", "Theo đuổi", "Mời gọi", "Đề xuất, kiến nghị", "Ủng hộ", "Chia sẻ", "Cống hiến", "Bênh vực, bảo vệ"]
+            this.dataSend = ["Cam kết", "Theo đuổi", "Mời gọi", "Đề xuất", "Kiến nghị", "Ủng hộ", "Chia sẻ", "Cống hiến", "Bênh vực", "Bảo vệ"]
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Nhìn nhận giá trị"
             this.$emit("mien", this.mien)
         },
 
         onPhanhoi() {
-            this.dataSend = ["Chấp nhận", "Chấp hành", "Tuân thủ", "Thực hành, thực hiện", "Tham gia", "Giao tiếp"]
+            this.dataSend = ["Chấp nhận", "Chấp hành", "Tuân thủ", "Thực hành", "Thực hiện", "Tham gia", "Giao tiếp"]
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Đáp ứng, phản hồi"
             this.$emit("mien", this.mien)
         },
 
         onTiepnhan() {
-            this.dataSend = ["Chấp nhận", "Phản hồi", "Ghi nhận, tiếp nhận", "Tham gia", "Lựa chọn", "Nhận diện, nhận biết"]
+            this.dataSend = ["Ghi nhận", "Tiếp nhận", "Nhận diện", "Nhận biết"]
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Tiếp nhận"
             this.$emit("mien", this.mien)
