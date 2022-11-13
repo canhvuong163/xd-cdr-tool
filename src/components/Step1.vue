@@ -1,33 +1,58 @@
 <template>
     <v-app>
         <div class="main">
+            <div class="font-white">
+                <h1>Bước 1: Chọn cấp độ chuẩn đầu ra theo từng miền</h1>
+                <p>Đây là các cấp độ tương ứng với mức độ phức tạp và cụ thể của một chuẩn đầu ra.
+                    Khi bạn đã chọn một cấp độ thích hợp. Hãy nhấn vào nút cấp độ để xem danh sách các động từ phân loại
+                    thích hợp cho cấp độ đã chọn</p>
+            </div>
+            <div class="menu">
+                <v-btn color="primary" elevation="2" class="btn" @click="nhanthuc">Nhận thức</v-btn>
+                <v-btn color="primary" elevation="2" class="btn" @click="kynang">Kỹ năng</v-btn>
+                <v-btn color="primary" elevation="2" class="btn" @click="thaido">Thái độ</v-btn>
+            </div>
+            <div v-if="stylemien === 'nhanthuc'" class="step1">
+                <!-- <div class="step1-1"> -->
+                <img src="../assets/img/6capdomnt.png" alt="err" class="img">
+                <div class="menu-btn-st1">
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onSangtao">Sáng tạo</v-btn>
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onDanhgia">Đánh giá</v-btn>
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onPhantich">Phân tích</v-btn>
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onApdung">Áp dụng</v-btn>
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onHieu">Hiểu</v-btn>
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onGhinho">Ghi nhớ</v-btn>
+                </div>
+                <!-- </div> -->
+            </div>
+            <div v-if="stylemien === 'kynang'" class="step1">
+                <img src="../assets/img/6capdomkn.png" alt="err" class="img">
+                <div class="menu-btn-st1">
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onSangtao1">Sáng tạo</v-btn>
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onThichung">Thích ứng</v-btn>
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onHoanthanhtd">Hoàn thành tự
+                        động</v-btn>
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onKyxao">Kỹ xảo</v-btn>
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onPhanhoicohd">Phản hồi có
+                        hưỡng dẫn</v-btn>
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onThietlap">Thiết lập</v-btn>
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onNhanthuc">Nhận thức</v-btn>
+                </div>
+            </div>
+            <div v-if="stylemien === 'thaido'" class="step1">
+                <img src="../assets/img/6capdomtd.png" alt="err" class="img">
+                <div class="menu-btn-st1">
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onCanhanhoa">Cá nhân hóa
+                    </v-btn>
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onTochuc">Tổ chức</v-btn>
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onNhangiatri">Nhận giá trị
+                    </v-btn>
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onPhanhoi">Phản hồi</v-btn>
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onTiepnhan">Tiếp nhận</v-btn>
+                </div>
+            </div>
             <div class="menu-btn">
                 <v-btn color="warning" elevation="2" class="btn-back-1" @click="onBack">Quay về</v-btn>
-            </div>
-            <div class="font-white">
-                <h1>Bước 1: Chọn cấp độ chuẩn đầu ra</h1>
-                <p>Đây là các cấp độ tương ứng với mức độ phức tạp và cụ thể của một chuẩn đầu ra. Nhấn vào các nút thông tin để xem mô tả của từng cấp độ.</p>
-                <p>Khi bạn đã chọn một cấp độ thích hợp. Hãy nhấn vào nút cấp độ để xem danh sách các động từ phân loại thích hợp cho cấp độ đã chọn</p>
-            </div>
-            <div class="step1">
-                <img src="../assets/img/6capdo.png" alt="err" class="img">
-                <div class="menu-btn-st1">
-                    <v-btn color="#008037" class="btn-back" style="color: white;" @click="onCreation">Sáng tạo</v-btn>
-                    <v-btn color="#03989e"  class="btn-back" style="color: white;" @click="onEvaluate">Đánh giá</v-btn>
-                    <v-btn color="#008037"  class="btn-back" style="color: white;" @click="onAnalysis">Phân tích</v-btn>
-                    <v-btn color="#03989e"  class="btn-back" style="color: white;" @click="onApplication">Áp dụng</v-btn>
-                    <v-btn color="#008037"  class="btn-back" style="color: white;" @click="onKnowledge">Hiểu</v-btn>
-                    <v-btn color="#03989e"  class="btn-back" style="color: white;" @click="onMemorize">Ghi nhớ</v-btn>
-                </div>
-                <div class="menu-btn-st1">
-                    <p class="inf"><img src="../assets/img/information.png" alt=""></p>
-                    <p class="inf"><img src="../assets/img/information.png" alt=""></p>
-                    <p class="inf"><img src="../assets/img/information.png" alt=""></p>
-                    <p class="inf"><img src="../assets/img/information.png" alt=""></p>
-                    <p class="inf"><img src="../assets/img/information.png" alt=""></p>
-                    <p class="inf"><img src="../assets/img/information.png" alt=""></p>
-                    
-                </div>
             </div>
         </div>
     </v-app>
@@ -42,33 +67,171 @@ export default {
 
     data() {
         return {
-
+            dataSend: [],
+            stylemien: 'nhanthuc',
+            mien: '',
+            databack: this.databack
         }
     },
 
     methods: {
-        onCreation() {
-            this.$emit("onCreation")
+        nhanthuc() {
+            this.stylemien = "nhanthuc"
+            this.databack = "nhanthuc"
         },
 
-        onEvaluate() {
-            this.$emit("onEvaluate")
+        kynang() {
+            this.stylemien = "kynang"
+            this.databack = "kynang"
         },
 
-        onAnalysis() {
-            this.$emit("onAnalysis")
+        thaido() {
+            this.stylemien = "thaido"
+            this.databack = "thaido"
+        },
+        //Mien nhan thuc
+        onSangtao() {
+            this.dataSend = ["Tích hợp", "Phát minh", "Chế tạo", "Diều hành", "Sửa đổi", "Lập kế hoạch", "Tạo ra", "Đề xuất", "Viết lại", "Tập hợp",
+                "Kết hợp", "Sáng tác", "Xây dựng", "Sáng tạo", "Thiết kế", "Phát triển", "Đề ra"]
+            this.$emit("onGhinho", this.dataSend)
+            this.mien = "Sáng tạo"
+            this.$emit("mien", this.mien)
         },
 
-        onApplication() {
-            this.$emit("onApplication")
+        onDanhgia() {
+            this.dataSend = ["Nhận định", "Chứng minh", "Xếp hạng", "Đề xuất", "Lựa chọn", "Xác nhận", "Kiểm tra", "Định giá", "Tranh luận", "Quyết định",
+                "Thuyết phục", "Bình phẩm", "Bình luận", "Biện hộ", "Phân biệt", "Ước lượng", "Đánh giá"]
+            this.$emit("onGhinho", this.dataSend)
+            this.mien = "Đánh giá"
+            this.$emit("mien", this.mien)
         },
 
-        onKnowledge() {
-            this.$emit("onKnowledge")
+        onPhantich() {
+            this.dataSend = ["Phân biệt", "Kiểm tra", "Xem xét", "Hệ thống hóa", "Phác thảo", "Nghiên cứu", "Lựa chọn", "Phân biệt", "Đơn giản hóa", "Phân tích",
+                "Đánh giá", "Phân chia ra", "Phân loại", "So sánh", "Đối chiếu", "Xây dựng", "Phân biệt", "Biểu đồ"]
+            this.$emit("onGhinho", this.dataSend)
+            this.mien = "Phân tích"
+            this.$emit("mien", this.mien)
         },
 
-        onMemorize() {
-            this.$emit("onMemorize")
+        onApdung() {
+            this.dataSend = ["Vận dụng", "Tính toán", "Thay đổi", "Phân loại", "Biên soạn", "Tính toán", "Xây dựng", "Chứng minh", "Làm thí nghiệm", "Thực hiện",
+                "Vận dụng", "Vẽ sơ đồ", "Dự đoán", "Trình bày", "Thuận lại", "Chỉ ra", "Giải quyết"]
+            this.$emit("onGhinho", this.dataSend)
+            this.mien = "Áp dụng"
+            this.$emit("mien", this.mien)
+        },
+
+        onHieu() {
+            this.dataSend = ["Liên kết", "So sánh", "Thảo luận", "Phân biệt", "Ước lượng", "Giải thích", "Diễn đạt", "Mở rộng", "Minh họa", "Chỉ ra",
+                "Suy luận", "Giải thích", "Diễn giải", "Thuật lại", "Phát biểu lại", "Tóm tắt"]
+            this.$emit("onGhinho", this.dataSend)
+            this.mien = "Hiểu"
+            this.$emit("mien", this.mien)
+        },
+
+        onGhinho() {
+            this.dataSend = ["Sắp xếp", "Xác định", "Miêu tả", "Vẽ", "Lặp lại", "Tìm ra", "Nhận ra", "Liệt kế", "Sắp xếp", "Gọi tên",
+                "Trích dẫn", "Nhớ lại", "Nhắc lại", "Phục hồi", "Tiến trình", "Chỉ ra", "Nói", "Viết"]
+            this.$emit("onGhinho", this.dataSend)
+            this.mien = "Ghi nhớ"
+            this.$emit("mien", this.mien)
+
+
+        },
+        //Mien ky nang
+        onSangtao1() {
+            this.dataSend = ["Sắp xếp", "Lập công thức", "Xây, đặt", "Khởi sướng", "Kết hợp", "Sáng tác", "Sửa đổi", "Thiết lập", "Phát minh", "Thiết kế lại", "Thiết kế", "Sắp xếp lại", "Sáng tạo", "Giải quyết vẫn đề"]
+            this.$emit("onGhinho", this.dataSend)
+            this.mien = "Sáng tạo (Miền kỹ năng)"
+            this.$emit("mien", this.mien)
+        },
+
+        onThichung() {
+            this.dataSend = ["Thích ứng", "Điều chỉnh", "Duyệt lại", "Sửa đổi", "Cải tổ", "Thay đổi"]
+            this.$emit("onGhinho", this.dataSend)
+            this.mien = "Thích ứng"
+            this.$emit("mien", this.mien)
+        },
+
+        onHoanthanhtd() {
+            this.dataSend = ["Hành động thành thói quen", "Thu thập", "Cải tiến", "Xây dựng", "Kiểm soát", "Xác định", "Đạo diễn", "Hoàn thành", "Nổi trội", "Dựng",
+                "Hưỡng dẫn", "Tháo", "Duy trì hiệu quả", "Hiển thị", "Quản lí", "Thành thạo", "Sửa chữa", "Tổ chức","Xay, tán","Làm cho hoàn thiện","Làm nóng","Thao tác thuần thục",
+                "Thao tác khéo léo","Tiến hành","Tính toán","Đo lường","Chỉnh sửa","Phác thảo"]
+            this.$emit("onGhinho", this.dataSend)
+            this.mien = "Hoàn thành tự động"
+            this.$emit("mien", this.mien)
+        },
+
+        onKyxao() {
+            this.dataSend = ["Hoàn thiện", "Lắp ráp", "Chứng minh", "Xác định", "Vận hành", "Hoàn thiện", "Cải thiện", "Tăng tốc", "Hiển thị", "Kiểm soát tốc độ",
+                "Gán cho", "Thực hành", "Tạo hình", "Cải tiến"]
+            this.$emit("onGhinho", this.dataSend)
+            this.mien = "Kỹ xảo"
+            this.$emit("mien", this.mien)
+
+        },
+
+        onPhanhoicohd() {
+            this.dataSend = ["Sao chép", "Nhân bản", "Hoàn thành", "Thực hiện", "Thể hiện", "Mô phỏng", "Thao tác theo hưỡng dẫn", "Vận hành có giám sát", "Thuật lại", "Thử nghiệm",
+                "Lắp ráp", "Xây dựng", "Đáp lại"]
+            this.$emit("onGhinho", this.dataSend)
+            this.mien = "Phản hồi có hưỡng dẫn"
+            this.$emit("mien", this.mien)
+
+        },
+
+        onThietlap() {
+            this.dataSend = ["Sắp xếp", "Khởi đầu", "Giải thích", "Di chuyển", "Chuẩn bị", "Thực hành", "Tác động", "Tuyên bố", "Tự nguyện", "Trả lời"]
+            this.$emit("onGhinho", this.dataSend)
+            this.mien = "Thiết lập"
+            this.$emit("mien", this.mien)
+
+        },
+
+        onNhanthuc() {
+            this.dataSend = ["Phát hiện ra", "Chọn lựa", "Lắng nghe", "Miêu tả", "Nghe thấy", "Phân biệt", "Quan sát", "Phân biệt", "Cảm thụ", "Cảm nhận",
+                "Nhận ra", "Xác định", "Xem sét", "Tách", "Nhận biết", "Quan sát thấy", "Chọn lựa"]
+            this.$emit("onGhinho", this.dataSend)
+            this.mien = "Nhận thức"
+            this.$emit("mien", this.mien)
+        },
+        //Mien thai do
+        onCanhanhoa() {
+            this.dataSend = ["Đóng vai, hành động", "Tán thành, chủ trương", "Thê hiện quan điểm", "Bảo vệ", "Thể hiện, minh họa", "Thể hiện minh họa bằng ví dụ thực tế", "Tạo ảnh hưởng linh hoạt", "Điều chỉnh hành vi", "Sửa đổi, điều chỉnh", "Cống hiến, tận tụy",
+                "Nội hóa, chủ quan hóa, có chủ kiến", "Rà soát", "Quản lý", "Giải quyết vẫn đề", "Làm sáng tỏ vẫn đề"]
+            this.$emit("onGhinho", this.dataSend)
+            this.mien = "Cá nhân hóa"
+            this.$emit("mien", this.mien)
+        },
+
+        onTochuc() {
+            this.dataSend = ["Linh hoạt, thích ứng", "Điều chỉnh", "Phân loại", "Bảo vệ", "Hình thành", "Thảo luận", "Hệ thống hóa", "Tổng hợp", "Thay thế", "kết hợp",
+                "So sánh", "Khái quát hóa", "Tích hợp", "Điều chỉnh"]
+            this.$emit("onGhinho", this.dataSend)
+            this.mien = "Tổ chức"
+            this.$emit("mien", this.mien)
+        },
+
+        onNhangiatri() {
+            this.dataSend = ["Cam kết", "Chứng minh", "Theo đuổi", "Mời gọi", "Đề xuất, kiến nghị", "Ủng hộ", "Chia sẻ", "Cống hiến", "Bênh vực, bảo vệ"]
+            this.$emit("onGhinho", this.dataSend)
+            this.mien = "Nhìn nhận giá trị"
+            this.$emit("mien", this.mien)
+        },
+
+        onPhanhoi() {
+            this.dataSend = ["Chấp nhận", "Chấp hành", "Tuân thủ", "Thực hành, thực hiện", "Tham gia", "Giao tiếp"]
+            this.$emit("onGhinho", this.dataSend)
+            this.mien = "Đáp ứng, phản hồi"
+            this.$emit("mien", this.mien)
+        },
+
+        onTiepnhan() {
+            this.dataSend = ["Chấp nhận", "Phản hồi", "Ghi nhận, tiếp nhận", "Tham gia", "Lựa chọn", "Nhận diện, nhận biết"]
+            this.$emit("onGhinho", this.dataSend)
+            this.mien = "Tiếp nhận"
+            this.$emit("mien", this.mien)
         },
 
         onBack() {
@@ -79,52 +242,59 @@ export default {
 </script>
 
 <style lang="css">
-    .inf{
-        width: 100px;
-        margin-top: 20px;
-        margin-left: auto;
-    }
+.inf {
+    width: 100px;
+    margin-top: 20px;
+    margin-left: auto;
+}
 
-    .btn-back {
-        width: 100px;
-        margin-top: 20px;
-        margin-left: auto;
-    }
+.btn-back {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    margin-right: auto;
+    flex-wrap: wrap;
+}
 
-    .btn-back-1 {
-        width: 100px;
-        margin-top: 20px;
-        margin-left: auto;
-    }
+.btn-back-1 {
+    width: 100px;
+    margin-top: 20px;
+    margin-left: auto;
+}
 
-    .step1 {
+.step1 {
+    display: flex;
+    border-radius: 0.5rem;
+    background-color: white;
+    padding: 20px;
+    padding-left: 0;
+}
+
+/* .step1-1 {
         display: flex;
-        border-radius: 0.5rem;
         background-color: white;
-        padding: 20px;
-        
-    }
+        margin: auto;
+    } */
 
-    .menu-btn-st1 {
-        display: grid ;
-        background-color: white;
-        
-    }
+.menu-btn-st1 {
+    display: grid;
+    background-color: white;
 
-    .menu-btn {
-        display: grid ;
-    }
+}
 
-    .img {
-        max-width: 68%;
-        max-height: 68%;
-        border-radius: 0.5rem;
-        
-    }
+.menu-btn {
+    display: grid;
+}
 
-    .font-white {
-        color: white;
-        
-    }
+.img {
+    max-width: 68%;
+    max-height: 68%;
+    border-radius: 0.5rem;
 
+}
+
+.font-white {
+    color: white;
+
+}
 </style>

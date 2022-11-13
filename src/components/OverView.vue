@@ -140,6 +140,7 @@ export default {
     margin-right: auto;
     margin-left: auto;
     margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .btn-start {

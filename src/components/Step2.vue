@@ -2,15 +2,16 @@
     <v-app>
         <div class="main">
             <h1>Bước 2: Chọn một động từ</h1>
-            <p class="font-white">Chọn một động từ theo chiều nhận thức <strong style="color: orange;">GHI NHỚ</strong> phù hợp với chuẩn đầu ra.</p>
+            <p class="font-white">Chọn một động từ theo mức độ nhận thức <strong style="color: orange;">{{miendl}}</strong> phù hợp với chuẩn đầu ra.</p>
 
-            <div class="step2">
-                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onDinhnghia">Định nghĩa</v-btn>
-                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onSaochep">Sao chép</v-btn>
-                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onLietke">Liệt kê</v-btn>
-                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onGhinho">Ghi nhớ</v-btn>
-                <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onLaplai">Lặp lại</v-btn>
-            </div>
+            <div class="step2" >
+                <div v-for="(item,index) in dataSend" :key="index" class="for">
+                    <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onDinhnghia(item)">
+                        {{item}}
+                    </v-btn>
+                </div>
+            </div>            
+            
             <div id="select" class="select" style="display: none;">
                     <p>Tại thời điểm kết thúc khóa học/mô -đun, bài học người học có thể:</p>
                     <strong>{{describe}}...</strong>
@@ -26,7 +27,11 @@
 
 <script>
 export default {
-    name: 'CompStep2Memorize',
+    name: 'CompStep2',
+    props: {
+        dataSend: Array,
+        miendl: String
+    },
 
     components: {
     },
@@ -34,7 +39,7 @@ export default {
     data() {
         return {
             describe: '',
-            dataBack:'memorize'
+            dataBack:'memorize',
         }
     },
 
@@ -47,6 +52,7 @@ export default {
                 this.$emit("onNext", this.describe)
                 this.$emit("dataBack", this.dataBack)
             }
+            
         },
       
         onPresent() {
@@ -54,29 +60,20 @@ export default {
             this.describe = "Trình bày"
         },
 
-        onDinhnghia() {
+        onDinhnghia(item) {
             document.getElementById("select").style.display="block"
-            this.describe = "Định nghĩa"
-        },
-
-        onSaochep() {
-            document.getElementById("select").style.display="block"
-            this.describe = "Sao chép"
-        },
-
-        onLietke() {
-            document.getElementById("select").style.display="block"
-            this.describe = "Liệt kê"
-        },
-
-        onGhinho() {
-            document.getElementById("select").style.display="block"
-            this.describe = "Ghi nhớ"
-        },
-
-        onLaplai() {
-            document.getElementById("select").style.display="block"
-            this.describe = "Lặp lại"
+            console.log(item)
+            this.describe = item
+            // switch (index) {
+            //     case 0:
+            //         this.describe = "Sắp xếp"
+            //         break;
+            //     case 1:
+            //         this.describe = "Xác định"
+            //         break;
+            //     default:
+            //         break;
+            // }
         },
 
         onBack() {
@@ -90,12 +87,18 @@ export default {
 .step2 {
     background-color: white;
     height: auto;
-    border-radius: 0.5rem;
+    display: flex;
     padding-left: auto;
+    border-radius: 0.5rem;
+    flex-wrap: wrap;
+    margin: 0 auto;
 }
 
 .btn-st2 {
-    width: 120px;
+    width: 100%;
+}
+
+.for {
     margin: 10px;
 }
 
