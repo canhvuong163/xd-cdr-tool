@@ -5,6 +5,8 @@
     @onBack="start"
     @onGhinho="memorize"
     @mien="mien"
+    @databackst1="dataBackst1"
+    :databackst2="databackst2"
   />
   <Step2 v-else-if="statusMath === 'memorize'"
     @onBack="begin"
@@ -12,6 +14,7 @@
     @dataBack="dataBack"
     :dataSend="dataSend"
     :miendl="miendl"
+    :databackst1="databackst1"
   />
   <Step3 v-else-if="statusMath === 'next'"
     @onBack="dlback"
@@ -56,10 +59,18 @@ export default {
       databack: this.databack,
       dataSend: this.dataSend,
       miendl: this.miendl,
+      databackst1: this.databackst1,
+      databackst2: this.databackst2
+
     }
   },
 
   methods: {
+
+    dataBackst1(data) {
+      this.databackst1=data
+      console.log(this.databackst1)
+    },
 
     dlback(data){
       if(data=="memorize")
@@ -93,7 +104,7 @@ export default {
     memorize(data) {
       this.statusMath = "memorize"
       this.dataSend = data
-      console.log(this.dataSend)
+      //console.log(this.dataSend)
     },
 
     mien(data) {
@@ -104,8 +115,10 @@ export default {
       this.statusMath = "start"
     },
 
-    begin() {
+    begin(data) {
       this.statusMath = "begin"
+      this.databackst2=data
+      console.log(this.databackst2,"123")
     },
   },
 };

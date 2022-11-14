@@ -8,13 +8,13 @@
                 <v-btn color="primary" elevation="2" class="btn" @click="instructions">Hướng dẫn</v-btn>
             </div>
 
-            <div class="contentover">
-                <div id="firts">
+            <div class="contentover" >
+                <div v-if="status === 'default'">
                     <p>Nhấn vào các Tabs để biết thông tin quan trọng cho việc sử dụng công cụ.</p>
                     <p>Nhấn vào <span style="color: green;">BẮT ĐẦU</span> khi bạn đã sẵn sàng!</p>
                 </div>
 
-                <div id="about" style="display: none;">
+                <div v-if="status === 'about'">
                     <h2>Giới thiệu về công cụ xây dựng chuẩn đầu ra</h2>
                     <p>Trong bối cảnh giáo dục đại học ngày nay, Các trường Đại học, cao đẳng thay đổi phương pháp tiếp
                         cận từ mô hình dạy học dựa trên nội dung sang mô hình dạy học dựa trên năng lực. Mô hình này đòi
@@ -67,7 +67,7 @@
                     <p>Lê Phương Trường</p>
                 </div>
 
-                <div id="instructions" style="display: none;">
+                <div v-if="status === 'instructions'">
                     <h2>Hướng dẫn về công cụ xây dựng chuẩn đầu ra</h2>
                     <p>Click vào <span style="color: green;">BẮT ĐẦU</span> để xây dựng một dự án. Hãy đọc kỹ tất cả các
                         thông tin hướng dẫn sau:</p>
@@ -94,7 +94,7 @@ export default {
 
     data() {
         return {
-
+            status: 'default'
         }
     },
 
@@ -104,15 +104,11 @@ export default {
         },
 
         about() {
-            document.getElementById("firts").style.display = "none"
-            document.getElementById("instructions").style.display = "none"
-            document.getElementById("about").style.display = "block"
+            this.status = "about"
         },
 
         instructions() {
-            document.getElementById("firts").style.display = "none"
-            document.getElementById("about").style.display = "none"
-            document.getElementById("instructions").style.display = "block"
+            this.status = "instructions"
         }
     }
 };

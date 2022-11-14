@@ -30,7 +30,8 @@ export default {
     name: 'CompStep2',
     props: {
         dataSend: Array,
-        miendl: String
+        miendl: String,
+        databackst1: String
     },
 
     components: {
@@ -62,7 +63,7 @@ export default {
 
         onDinhnghia(item) {
             document.getElementById("select").style.display="block"
-            console.log(item)
+            //console.log(item)
             this.describe = item
             // switch (index) {
             //     case 0:
@@ -77,7 +78,7 @@ export default {
         },
 
         onBack() {
-            this.$emit("onBack")
+            this.$emit("onBack", this.databackst1)
         }
     }
 };
