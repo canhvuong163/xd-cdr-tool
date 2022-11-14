@@ -145,7 +145,7 @@ export default {
         //Mien ky nang
         onSangtao1() {
             this.dataSend = ["Lập công thức", "Xây", "Đặt", "Khởi sướng", "Kết hợp", "Sửa đổi", "Thiết lập", "Phát minh", "Thiết kế lại",
-            "Thiết kế", "Sắp xếp lại", "Giải quyết vẫn đề"]
+            "Thiết kế", "Sắp xếp lại", "Giải quyết vấn đề"]
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Sáng tạo (Miền kỹ năng)"
             this.$emit("mien", this.mien)
@@ -203,7 +203,7 @@ export default {
         //Mien thai do
         onCanhanhoa() {
             this.dataSend = ["Đóng vai", "Hành động", "Tán thành","Chủ trương", "Thể hiện quan điểm", "Bảo vệ", "Thể hiện"," Minh họa", "Thể hiện minh họa bằng ví dụ thực tế", "Tạo ảnh hưởng linh hoạt", "Điều chỉnh hành vi", "Sửa đổi","Điều chỉnh", "Cống hiến", "Tận tụy",
-                "Nội hóa","Chủ quan hóa","Có chủ kiến", "Rà soát", "Quản lý", "Giải quyết vẫn đề", "Làm sáng tỏ vấn đề"]
+                "Nội hóa","Chủ quan hóa","Có chủ kiến", "Rà soát", "Quản lý", "Làm sáng tỏ vấn đề"]
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Cá nhân hóa"
             this.$emit("mien", this.mien)
