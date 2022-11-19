@@ -44,7 +44,7 @@
                     <p><strong>4. Phân tích (Analyzing): </strong>Phân tích là khả năng chia thông tin thành những phần
                         nhỏ và chỉ ra mối lien hệ của chúng tới tổng thể.</p>
                     <p><strong>5. Đánh giá (Evaluating): </strong>Đưa ra nhận định, phán quyết của bản thân đối với
-                        thông tin dựa tren cac chuẩn mực, tiêu chi.</p>
+                        thông tin dựa trên các chuẩn mực, tiêu chí.</p>
                     <p><strong>6. Sáng tạo (Creating):</strong>Đây là cấp độ cao nhất của thang đo Bloom. Sáng tạo là
                         khả năng ghép các kiến thức, thông tin đã có lại với nhau để tạo thành một sản phẩm mới, thông
                         tin mới, kiến thức mới, ví dụ như thực hiện luận văn tốt nghiệp, nghiên cứu khoa học hoặc tạo ra

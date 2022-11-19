@@ -30,8 +30,7 @@ export default {
     name: 'CompStep2',
     props: {
         dataSend: Array,
-        miendl: String,
-        databackst1: String
+        miendl: String
     },
 
     components: {
@@ -78,7 +77,7 @@ export default {
         },
 
         onBack() {
-            this.$emit("onBack", this.databackst1)
+            this.$emit("onBack")
         }
     }
 };
