@@ -169,7 +169,7 @@ export default {
 
         onKyxao() {
             this.dataSend = ["Điều hành","Lắp ráp", "Chứng minh", "Vận hành", "Hoàn thiện", "Cải thiện", "Tăng tốc", "Kiểm soát tốc độ",
-                "Gán cho", "Thực hành", "Tạo hình"]
+                "Gán cho", "Thực hành", "Tạo hình","Bảo trì","Bảo dưỡng","Tháo lắp","Sửa chữa"]
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Kỹ xảo"
             this.$emit("mien", this.mien)
