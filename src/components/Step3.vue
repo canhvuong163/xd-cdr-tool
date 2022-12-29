@@ -21,8 +21,8 @@
 
             </div>
             <div class="menu-btn-st2">
-                <v-btn color="warning" class="btn-back-st2" @click="onBack">Quay về</v-btn>
-                <v-btn color="warning" id="next" class="btn-next" @click="addText">Tiếp tục</v-btn>
+                <v-btn color="warning" class="btn-back-st2" @click="onBack">Quay về/ Back</v-btn>
+                <v-btn color="warning" id="next" class="btn-next" @click="addText">Tiếp tục/ Next</v-btn>
             </div>
 
         </div>
@@ -43,6 +43,7 @@ export default {
         return {
             text: '',
             message: '',
+            arrCdr: []
         }
     },
 
