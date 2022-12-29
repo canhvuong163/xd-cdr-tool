@@ -4,8 +4,18 @@
             <h1>Bước 2: Chọn một động từ</h1>
             <p class="font-white">Chọn một động từ theo mức độ nhận thức <strong style="color: orange;">{{miendl}}</strong> phù hợp với chuẩn đầu ra.</p>
 
+            <p class="font-white">Tiếng Việt</p>
             <div class="step2" >
                 <div v-for="(item,index) in dataSend" :key="index" class="for">
+                    <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onDinhnghia(item)">
+                        {{item}}
+                    </v-btn>
+                </div>
+            </div>
+            <br>
+            <p class="font-white">Tiếng Anh</p>
+            <div class="step2" >
+                <div v-for="(item,index) in dataEng" :key="index" class="for">
                     <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onDinhnghia(item)">
                         {{item}}
                     </v-btn>
@@ -18,8 +28,8 @@
             </div>
             
             <div class="menu-btn-st2">
-                <v-btn color="warning" class="btn-back-st2" @click="onBack">Quay về</v-btn>
-                <v-btn color="warning" id="next" class="btn-next" @click="onNext">Tiếp tục</v-btn>
+                <v-btn color="warning" class="btn-back-st2" @click="onBack">Quay về/ Back</v-btn>
+                <v-btn color="warning" id="next" class="btn-next" @click="onNext">Tiếp tục/ Next</v-btn>
             </div>
         </div>
     </v-app>
@@ -30,7 +40,8 @@ export default {
     name: 'CompStep2',
     props: {
         dataSend: Array,
-        miendl: String
+        miendl: String,
+        dataEng: Array
     },
 
     components: {
@@ -103,14 +114,14 @@ export default {
 }
 
 .btn-next {
-    width: 100px;
+    width: 150px;
     margin-top: 20px;
     margin-left: 10px;
     margin-right: 10px;
 }
 
 .btn-back-st2 {
-    width: 100px;
+    width: 150px;
     margin-top: 20px;
     margin-right: 10px;
     margin-left: auto;

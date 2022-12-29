@@ -11,14 +11,13 @@
             <div class="step3">
                 
                     <v-textarea name="input-7-1" filled label="Nhập nội dung của bạn" auto-grow class="input-text"
-                        v-bind:value="text" v-on:keyup="text = $event.target.value">
-
+                        v-bind:value="describe" v-on:keyup="text = $event.target.value">
                     </v-textarea>
                 
             </div>
             <div id="select" class="select">
                 <p>Tại thời điểm kết thúc khóa học/mô -đun, bài học người học có thể:</p>
-                <p>{{ describe }} {{ text }}</p>
+                <p>{{ text }}</p>
 
             </div>
             <div class="menu-btn-st2">

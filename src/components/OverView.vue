@@ -4,8 +4,8 @@
             <h1>Tổng quan về công cụ</h1>
 
             <div class="menu">
-                <v-btn color="primary" elevation="2" class="btn" @click="about">Giới thiệu</v-btn>
-                <v-btn color="primary" elevation="2" class="btn" @click="instructions">Hướng dẫn</v-btn>
+                <v-btn color="primary" elevation="2" class="btn" @click="about">Giới thiệu/ Introduce</v-btn>
+                <v-btn color="primary" elevation="2" class="btn" @click="instructions">Hướng dẫn/ Tutorial</v-btn>
             </div>
 
             <div class="contentover" >
@@ -79,7 +79,7 @@
             </div>
 
             <div class="menu-btn">
-                <v-btn color="success" elevation="2" @click="onBegin" class="btn-start">Bắt đầu</v-btn>
+                <v-btn color="success" elevation="2" @click="onBegin" class="btn-start">Bắt đầu/ Start</v-btn>
             </div>
         </div>
     </v-app>
@@ -132,7 +132,7 @@ export default {
 }
 
 .btn {
-    width: 115px;
+    width: 200px;
     margin-right: auto;
     margin-left: auto;
     margin-top: 20px;
@@ -140,7 +140,7 @@ export default {
 }
 
 .btn-start {
-    width: 100px;
+    width: 150px;
     margin-top: 20px;
     margin-left: auto;
 }

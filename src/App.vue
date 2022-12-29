@@ -4,6 +4,7 @@
   <Step1 v-else-if="statusMath === 'begin'" 
     @onBack="start"
     @onGhinho="memorize"
+    @onEng="english"
     @mien="mien"
   />
   <Step2 v-else-if="statusMath === 'memorize'"
@@ -11,6 +12,7 @@
     @onNext="next"
     @dataBack="dataBack"
     :dataSend="dataSend"
+    :dataEng="dataEng"
     :miendl="miendl"
   />
   <Step3 v-else-if="statusMath === 'next'"
@@ -55,6 +57,7 @@ export default {
       message: this.message,
       databack: this.databack,
       dataSend: this.dataSend,
+      dataEng: this.dataEng,
       miendl: this.miendl
 
     }
@@ -95,6 +98,10 @@ export default {
       this.statusMath = "memorize"
       this.dataSend = data
       //console.log(this.dataSend)
+    },
+
+    english(data) {
+      this.dataEng = data
     },
 
     mien(data) {

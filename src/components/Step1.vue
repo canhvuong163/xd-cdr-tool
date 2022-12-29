@@ -8,49 +8,49 @@
                     thích hợp cho cấp độ đã chọn</p>
             </div>
             <div class="menu">
-                <v-btn color="primary" elevation="2" class="btn" @click="nhanthuc">Nhận thức</v-btn>
-                <v-btn color="primary" elevation="2" class="btn" @click="kynang">Kỹ năng</v-btn>
-                <v-btn color="primary" elevation="2" class="btn" @click="thaido">Thái độ</v-btn>
+                <v-btn color="primary" elevation="2" class="btn" @click="nhanthuc">Kiến thức/ Knowledge</v-btn>
+                <v-btn color="primary" elevation="2" class="btn" @click="kynang">Kỹ năng/ Skill</v-btn>
+                <v-btn color="primary" elevation="2" class="btn" @click="thaido">Thái độ/ Attitude</v-btn>
             </div>
             <div v-if="stylemien === 'nhanthuc'" class="step1">
                 <!-- <div class="step1-1"> -->
                 <img src="../assets/img/6capdomnt.png" alt="err" class="img">
                 <div class="menu-btn-st1">
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onSangtao">Sáng tạo</v-btn>
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onDanhgia">Đánh giá</v-btn>
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onPhantich">Phân tích</v-btn>
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onApdung">Áp dụng</v-btn>
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onHieu">Hiểu</v-btn>
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onGhinho">Ghi nhớ</v-btn>
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onSangtao">Sáng tạo/ Creation</v-btn>
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onDanhgia">Đánh giá/ Evaluate</v-btn>
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onPhantich">Phân tích/ Analyze</v-btn>
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onApdung">Áp dụng/ Apply</v-btn>
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onHieu">Hiểu/ Understand</v-btn>
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onGhinho">Ghi nhớ/ Remember</v-btn>
                 </div>
                 <!-- </div> -->
             </div>
             <div v-if="stylemien === 'kynang'" class="step1">
                 <img src="../assets/img/6capdomkn.png" alt="err" class="img">
                 <div class="menu-btn-st1">
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onSangtao1">Sáng tạo</v-btn>
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onThichung">Thích ứng</v-btn>
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onHoanthanhtd">Hoàn thành</v-btn>
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onKyxao">Kỹ xảo</v-btn>
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onPhanhoicohd">Phản hồi</v-btn>
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onThietlap">Thiết lập</v-btn>
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onNhanthuc">Nhận thức</v-btn>
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onSangtao1">Sáng tạo/ Create</v-btn>
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onThichung">Thích ứng/ Adapt</v-btn>
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onHoanthanhtd">Hoàn thành/ Accomplish</v-btn>
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onKyxao">Kỹ xảo/ Technique</v-btn>
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onPhanhoicohd">Phản hồi/ Feedback</v-btn>
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onThietlap">Thiết lập/ Set</v-btn>
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onNhanthuc">Nhận thức/ Realize</v-btn>
                 </div>
             </div>
             <div v-if="stylemien === 'thaido'" class="step1">
                 <img src="../assets/img/6capdomtd.png" alt="err" class="img">
                 <div class="menu-btn-st1">
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onCanhanhoa">Cá nhân hóa
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onCanhanhoa">Cá nhân hóa/ Personalize
                     </v-btn>
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onTochuc">Tổ chức</v-btn>
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onNhangiatri">Nhận giá trị
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onTochuc">Tổ chức/ Organize</v-btn>
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onNhangiatri">Nhận giá trị/ Get Value
                     </v-btn>
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onPhanhoi">Phản hồi</v-btn>
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onTiepnhan">Tiếp nhận</v-btn>
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onPhanhoi">Phản hồi/ Feedback</v-btn>
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onTiepnhan">Tiếp nhận/ Adopt</v-btn>
                 </div>
             </div>
             <div class="menu-btn">
-                <v-btn color="warning" elevation="2" class="btn-back-1" @click="onBack">Quay về</v-btn>
+                <v-btn color="warning" elevation="2" class="btn-back-1" @click="onBack">Quay về/ Back</v-btn>
             </div>
         </div>
     </v-app>
@@ -68,8 +68,9 @@ export default {
     data() {
         return {
             dataSend: [],
+            dataEng: [],
             stylemien: "nhanthuc",
-            mien: '',
+            mien: ''
            
         }
     },
@@ -94,7 +95,10 @@ export default {
         onSangtao() {
             this.dataSend = ["Tích hợp", "Phát minh", "Chế tạo", "Điều hành", "Sửa đổi", "Lập kế hoạch", "Tạo ra", "Đề xuất",
              "Viết lại", "Tập hợp", "Kết hợp", "Sáng tác", "Xây dựng", "Sáng tạo", "Thiết kế", "Phát triển", "Đề ra"]
+            this.dataEng = ["Integration", "Invent", "Craft", "Administer", "Modify", "Plan", "Create", "Propose", "Rewrite", "Gather",
+             "Combine", "Compose", "Build", "Design", "Develop"]
             this.$emit("onGhinho", this.dataSend)
+            this.$emit("onEng", this.dataEng)
             this.mien = "Sáng tạo (Miền nhận thức)"
             this.$emit("mien", this.mien)
             //
@@ -103,7 +107,10 @@ export default {
         onDanhgia() {
             this.dataSend = ["Nhận định", "Chứng minh", "Xếp hạng", "Lựa chọn", "Xác nhận", "Kiểm tra", "Định giá", "Tranh luận", "Quyết định",
                 "Thuyết phục", "Bình phẩm", "Bình luận", "Biện hộ", "Phân biệt", "Ước lượng", "Đánh giá"]
+            this.dataEng = ["Confirmation", "Prove", "Ranking", "Choice", "Confirm", "Test", "Valuation", "argue", "determine", "persuade",
+             "comment","advocate","discriminate","estimate","evaluate"]
             this.$emit("onGhinho", this.dataSend)
+            this.$emit("onEng", this.dataEng)
             this.mien = "Đánh giá"
             this.$emit("mien", this.mien)
         },
@@ -120,6 +127,7 @@ export default {
             this.dataSend = ["Áp  dụng","Vận dụng", "Tính toán", "Thay đổi", "Biên soạn", "Làm thí nghiệm", "Thực hiện",
             "Vẽ sơ đồ", "Dự đoán", "Trình bày", "Thuật lại", "Chỉ ra", "Giải quyết"]
             this.$emit("onGhinho", this.dataSend)
+            
             this.mien = "Áp dụng"
             this.$emit("mien", this.mien)
         },
@@ -143,7 +151,7 @@ export default {
         },
         //Mien ky nang
         onSangtao1() {
-            this.dataSend = ["Sáng tạo","Sáng tác","Lập công thức", "Xây", "Đặt", "Khởi sướng", "Kết hợp", "Sửa đổi", "Thiết lập", "Phát minh", "Thiết kế lại",
+            this.dataSend = ["Sáng tạo","Sáng tác","Lập công thức", "Xây", "Đặt", "Khởi xướng", "Kết hợp", "Sửa đổi", "Thiết lập", "Phát minh", "Thiết kế lại",
             "Thiết kế", "Sắp xếp lại", "Giải quyết vấn đề"]
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Sáng tạo (Miền kỹ năng)"
@@ -177,7 +185,7 @@ export default {
         },
 
         onPhanhoicohd() {
-            this.dataSend = ["Sao chép", "Nhân bản", "Thực hiện", "Thể hiện", "Mô phỏng", "Thao tác theo hưỡng dẫn", "Vận hành có giám sát", "Thuật lại", "Thử nghiệm",
+            this.dataSend = ["Sao chép", "Nhân bản", "Thực hiện", "Thể hiện", "Mô phỏng", "Thao tác theo hướng dẫn", "Vận hành có giám sát", "Thuật lại", "Thử nghiệm",
                 "Xây dựng", "Đáp lại"]
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Phản hồi có hưỡng dẫn"
@@ -261,7 +269,7 @@ export default {
 }
 
 .btn-back-1 {
-    width: 100px;
+    width: 140px;
     margin-top: 20px;
     margin-left: auto;
 }

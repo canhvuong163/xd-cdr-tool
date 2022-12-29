@@ -2,6 +2,7 @@
     <v-app>
         <div class="container">
             <div class="content">
+                <img src="../img/logo_xoa_nen.png" height="200">
                 <h1>Công cụ xây dựng chuẩn đầu ra</h1>
                 <p>Bộ công cụ này hỗ trợ Quý Thầy/Cô xây dựng chuẩn đầu ra một cách chính xác và ngắn gọn.</p>
                 <v-btn @click="onStart">Bắt đầu dự án</v-btn>
@@ -39,7 +40,7 @@ export default {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border: thin solid rgba(84, 84, 87, 0.25);
     text-align: center;
-    margin-top: 250px;
+    margin-top: 150px;
     background-color: rgba(0, 183, 255, 0.377);
 }
 </style>
