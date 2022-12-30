@@ -57,7 +57,7 @@ export default {
                 alert('Vui lòng nhập mô tả')
             }
             else {
-                this.message = this.describe + " " + this.text
+                this.message = this.text
                 this.$emit("onFinal", this.message)
             }
         }
