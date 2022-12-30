@@ -1,8 +1,8 @@
 <template>
     <v-app>
         <div class="main">
-            <h1>Hoàn thành chuẩn đầu ra</h1>
-            <p class="font-white">Sao chép và nhúng chuẩn đầu ra đã hoàn thành vào tài liệu của Quý Thầy/Cô.</p>
+            <h1>Hoàn thành chuẩn đầu ra - Complete the learning outcome </h1>
+            <p class="font-white">Sao chép và nhúng chuẩn đầu ra đã hoàn thành vào tài liệu của Quý Thầy/Cô - Coppy the learning outcome and paste it to your document.</p>
             
 
             <div class="final">

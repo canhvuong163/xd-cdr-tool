@@ -2,7 +2,7 @@
     <v-app>
         <div class="main">
             <h1>Bước 2: Chọn một động từ</h1>
-            <p class="font-white">Chọn một động từ theo mức độ nhận thức <strong style="color: orange;">{{miendl}}</strong> phù hợp với chuẩn đầu ra.</p>
+            <p class="font-white">Chọn một động từ theo mức độ nhận thức <strong style="color: orange;">{{miendl}}</strong> phù hợp với chuẩn đầu ra- Choose an action verb according to the level of Bloom align with learning outcome.</p>
 
             <p class="font-white">Tiếng Việt</p>
             <div class="step2" >
@@ -13,7 +13,7 @@
                 </div>
             </div>
             <br>
-            <p class="font-white">Tiếng Anh</p>
+            <p class="font-white">English</p>
             <div class="step2" >
                 <div v-for="(item,index) in dataEng" :key="index" class="for">
                     <v-btn color="#03989e" class="btn-st2" style="color: white;" @click="onDinhnghia(item)">

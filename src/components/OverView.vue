@@ -1,17 +1,17 @@
 <template>
     <v-app>
         <div class="main">
-            <h1>Tổng quan về công cụ</h1>
+            <h1>Giới thiệu-Introduction</h1>
 
             <div class="menu">
-                <v-btn color="primary" elevation="2" class="btn" @click="about">Giới thiệu/ Introduce</v-btn>
-                <v-btn color="primary" elevation="2" class="btn" @click="instructions">Hướng dẫn/ Tutorial</v-btn>
+                <v-btn color="primary" elevation="2" class="btn" @click="about">Giới thiệu</v-btn>
+                <v-btn color="primary" elevation="2" class="btn" @click="instructions">Hướng dẫn</v-btn>
             </div>
 
             <div class="contentover" >
                 <div v-if="status === 'default'">
-                    <p>Nhấn vào các Tabs để biết thông tin quan trọng cho việc sử dụng công cụ.</p>
-                    <p>Nhấn vào <span style="color: green;">BẮT ĐẦU</span> khi bạn đã sẵn sàng!</p>
+                    <p>Nhấn vào các Tabs để biết thông tin quan trọng cho việc sử dụng công cụ - Click the Tabs in order to having important information for using the tool.</p>
+                    <p>Nhấn vào <span style="color: green;">BẮT ĐẦU/ START</span> khi bạn đã sẵn sàng/when you're ready!</p>
                 </div>
 
                 <div v-if="status === 'about'">

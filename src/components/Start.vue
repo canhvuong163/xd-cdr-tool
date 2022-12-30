@@ -2,10 +2,10 @@
     <v-app>
         <div class="container">
             <div class="content">
-                <img src="../img/logo_xoa_nen.png" height="200">
-                <h1>Công cụ xây dựng chuẩn đầu ra</h1>
-                <p>Bộ công cụ này hỗ trợ Quý Thầy/Cô xây dựng chuẩn đầu ra một cách chính xác và ngắn gọn.</p>
-                <v-btn @click="onStart">Bắt đầu dự án</v-btn>
+                <img src="../assets/img/logo 1.png" height="150">
+                <h1>Công cụ xây dựng chuẩn đầu ra - Learning Outcome building tool </h1>
+                <p>Bộ công cụ này hỗ trợ Quý Thầy/Cô xây dựng chuẩn đầu ra dựa trên thang đo mức độ nhận thức Bloom.</p>
+                <v-btn @click="onStart">Bắt đầu dự án/Start Project</v-btn>
             </div>
         </div>
     </v-app>

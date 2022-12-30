@@ -2,21 +2,21 @@
     <v-app>
         <div class="main">
             <div class="font-white">
-                <h1>Bước 1: Chọn cấp độ chuẩn đầu ra theo từng miền</h1>
+                <h1>Bước 1: Chọn cấp độ chuẩn đầu ra theo từng miền - Select a learning outcome level </h1>
                 <p>Đây là các cấp độ tương ứng với mức độ phức tạp và cụ thể của một chuẩn đầu ra.
                     Khi bạn đã chọn một cấp độ thích hợp. Hãy nhấn vào nút cấp độ để xem danh sách các động từ phân loại
                     thích hợp cho cấp độ đã chọn</p>
             </div>
             <div class="menu">
                 <v-btn color="primary" elevation="2" class="btn" @click="nhanthuc">Kiến thức/ Knowledge</v-btn>
-                <v-btn color="primary" elevation="2" class="btn" @click="kynang">Kỹ năng/ Skill</v-btn>
+                <v-btn color="primary" elevation="2" class="btn" @click="kynang">Kỹ năng/ Skills</v-btn>
                 <v-btn color="primary" elevation="2" class="btn" @click="thaido">Thái độ/ Attitude</v-btn>
             </div>
             <div v-if="stylemien === 'nhanthuc'" class="step1">
                 <!-- <div class="step1-1"> -->
                 <img src="../assets/img/6capdomnt.png" alt="err" class="img">
                 <div class="menu-btn-st1">
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onSangtao">Sáng tạo/ Creation</v-btn>
+                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onSangtao">Sáng tạo/ Create</v-btn>
                     <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onDanhgia">Đánh giá/ Evaluate</v-btn>
                     <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onPhantich">Phân tích/ Analyze</v-btn>
                     <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onApdung">Áp dụng/ Apply</v-btn>
