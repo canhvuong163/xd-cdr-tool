@@ -65,6 +65,8 @@
                     </p>
                     <p>Trân Trọng</p>
                     <p>Lê Phương Trường</p>
+                    <p>Email: letruonglhu@gmail.com; lephuongtruong@lhu.edu.vn</p>
+                    <p>Đt: 0984821007</p>
                 </div>
 
                 <div v-if="status === 'instructions'">

@@ -5,7 +5,7 @@
                 <h1>Bước 1: Chọn cấp độ chuẩn đầu ra theo từng miền - Select a learning outcome level </h1>
                 <p>Đây là các cấp độ tương ứng với mức độ phức tạp và cụ thể của một chuẩn đầu ra.
                     Khi bạn đã chọn một cấp độ thích hợp. Hãy nhấn vào nút cấp độ để xem danh sách các động từ phân loại
-                    thích hợp cho cấp độ đã chọn</p>
+                    thích hợp cho cấp độ đã chọn.</p>
             </div>
             <div class="menu">
                 <v-btn color="primary" elevation="2" class="btn" @click="nhanthuc">Kiến thức/ Knowledge</v-btn>
@@ -183,19 +183,19 @@ export default {
         onHoanthanhtd() {
             this.dataSend = ["Hành động thành thói quen", "Thu thập", "Cải tiến", "Kiểm soát", "Xác định", "Đạo diễn", "Hoàn thành", "Nổi trội", "Dựng",
                 "Hướng dẫn", "Tháo", "Duy trì hiệu quả", "Hiển thị", "Quản lí", "Thành thạo", "Sửa chữa", "Tổ chức","Xay", "Tán", "Làm cho hoàn thiện", "Làm nóng","Thao tác thuần thục",
-                "Thao tác khéo léo","Tiến hành","Đo lường","Chỉnh sửa"]
+                "Thao tác khéo léo","Tiến hành","Đo lường","Chỉnh sửa", "bảo trì", "lắp", "Bảo dưỡng"]
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Hoàn thành tự động"
             this.$emit("mien", this.mien)
             this.dataEng = ["Action to Habit", "Gather", "Improve", "Control", "Determine", "Direct", "Finish", "Spot", "Build",
                 "Instructions", "Remove", "Maintain Efficiency", "Show", "Manage", "Professional", "Repair", "Organize", "Grill", "Cover", " Finishing", "Heating", "Mastering",
-                "Flex work","Proceed","Measurement","Edit"]
+                "Flex work","Proceed","Measurement","Edit","install","Maintain"]
             this.$emit("onEng", this.dataEng)
         },
 
         onKyxao() {
             this.dataSend = ["Điều hành","Lắp ráp", "Chứng minh", "Vận hành", "Hoàn thiện", "Cải thiện", "Tăng tốc", "Kiểm soát tốc độ",
-                "Gán cho", "Thực hành", "Tạo hình","Bảo trì","Bảo dưỡng","Tháo lắp"]
+                "Gán cho", "Thực hành", "Tạo hình"]
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Kỹ xảo"
             this.$emit("mien", this.mien)

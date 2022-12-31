@@ -3,7 +3,7 @@
         <div class="main">
             <div class="font-white">
             <h1>Bước 3: Mô tả chuẩn đầu ra- Learning outcome Description</h1>
-            <p>Mong muốn chuẩn đầu ra hoàn thiện và đo lường được Đây thường là một danh từ hoặc cụm danh từ (Động từ hành động + đối tượng + ngữ cảnh). Hãy chắc chắn
+            <p>Mong muốn chuẩn đầu ra hoàn thiện và dễ hiểu, đây thường là một danh từ hoặc cụm danh từ (động từ hành động + đối tượng + ngữ cảnh). Hãy chắc chắn
                 rằng quý Thầy/Cô mô tả chuẩn đầu ra đạt mức độ mong muốn và có thể chấp nhận được.</p>
             <p>Khi quý Thầy/Cô hài lòng với chuẩn đầu ra, hãy nhấn vào <span style="color: orange">TIẾP TỤC </span>.</p>
             <p> When you are satisfied with the Learning outcome, Click<span style="color: orange"> NEXT </span>.</p>
