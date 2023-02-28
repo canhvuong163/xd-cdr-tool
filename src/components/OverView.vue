@@ -133,6 +133,15 @@ export default {
     position: relative;
 }
 
+@media screen and (max-width: 600px) {
+    .menu {
+      flex-direction: column;
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+  }
+
 .btn {
     width: 200px;
     margin-right: auto;
