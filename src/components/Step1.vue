@@ -95,7 +95,7 @@ export default {
         onSangtao() {
             this.dataSend = ["Tích hợp", "Phát minh", "Chế tạo", "Điều hành", "Sửa đổi", "Lập kế hoạch", "Tạo ra", "Đề xuất",
              "Viết lại", "Tập hợp", "Kết hợp", "Sáng tác", "Xây dựng", "Sáng tạo", "Thiết kế", "Phát triển", "Đề ra"]
-            this.dataEng = ["Integration", "Invent", "Craft", "Administer", "Modify", "Plan", "Create", "Propose", "Rewrite", "Gather",
+            this.dataEng = ["Integrate", "Invent", "Craft", "Administer", "Modify", "Plan", "Create", "Propose", "Rewrite", "Gather",
              "Combine", "Compose", "Build", "Design", "Develop"]
             this.$emit("onGhinho", this.dataSend)
             this.$emit("onEng", this.dataEng)
@@ -107,7 +107,7 @@ export default {
         onDanhgia() {
             this.dataSend = ["Nhận định", "Chứng minh", "Xếp hạng", "Lựa chọn", "Xác nhận", "Kiểm tra", "Định giá", "Tranh luận", "Quyết định",
                 "Thuyết phục", "Bình phẩm", "Bình luận", "Biện hộ", "Phân biệt", "Ước lượng", "Đánh giá"]
-            this.dataEng = ["Confirmation", "Prove", "Ranking", "Choice", "Confirm", "Test", "Valuation", "argue", "determine", "persuade",
+            this.dataEng = ["Confirm", "Prove", "Rank", "Choose", "Confirm", "Test", "Value", "argue", "determine", "persuade",
              "comment","advocate","discriminate","estimate","evaluate"]
             this.$emit("onGhinho", this.dataSend)
             this.$emit("onEng", this.dataEng)
@@ -127,9 +127,9 @@ export default {
         },
 
         onApdung() {
-            this.dataSend = ["Áp  dụng","Vận dụng", "Tính toán", "Thay đổi", "Biên soạn", "Làm thí nghiệm", "Thực hiện",
+            this.dataSend = ["Áp dụng","Vận dụng", "Tính toán", "Thay đổi", "Biên soạn", "Làm thí nghiệm", "Thực hiện",
             "Vẽ sơ đồ", "Dự đoán", "Trình bày", "Thuật lại", "Chỉ ra", "Giải quyết"]
-            this.dataEng = ["apply","calculate","change","compile","do an experiment","implement","draw diagram","predict","presentation"," report ","indicates","solves"]
+            this.dataEng = ["apply","calculate","change","compile"," experiment","implement","draw diagram","predict","presentation"," report ","indicates","solves"]
             this.$emit("onEng", this.dataEng)
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Áp dụng"
@@ -139,7 +139,7 @@ export default {
         onHieu() {
             this.dataSend = ["Liên kết", "Thảo luận", "Diễn đạt", "Mở rộng", "Minh họa",
                 "Suy luận", "Giải thích", "Diễn giải", "Phát biểu lại", "Tóm tắt"]
-            this.dataEng = ["link", "discussion", "express", "extend", "illustrate", "infer" , "explain", "interpret" , "restate" , "summarize"]
+            this.dataEng = ["link", "discuss", "express", "extend", "illustrate", "infer" , "explain", "interpret" , "restate" , "summarize"]
             this.$emit("onEng", this.dataEng)
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Hiểu"
@@ -153,7 +153,7 @@ export default {
             this.mien = "Ghi nhớ"
             this.$emit("mien", this.mien)
             this.dataEng = ["Arrange", "Identify", "Describe", "Draw", "Repeat", "Find", "Recognize", "List", "Name",
-                "Quote", "Recall", "Recovery", "Progress", "Speak", "Write"]
+                "Quote", "Recall", "Recover", "Progress", "Speak", "Write"]
             this.$emit("onEng", this.dataEng)
 
 
@@ -166,7 +166,7 @@ export default {
             this.mien = "Sáng tạo (Miền kỹ năng)"
             this.$emit("mien", this.mien)
             this.dataEng = ["Create", "Formulate", "Build", "Put", "Initiate", "Combine", "Modify", "Set up", "Invent", "Redesign",
-            "Design", "Reorder", "Problem Solving"]
+            "Design", "Reorder", "solve problems"]
             this.$emit("onEng", this.dataEng)
             //
         },
@@ -176,20 +176,20 @@ export default {
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Thích ứng"
             this.$emit("mien", this.mien)
-            this.dataEng = ["Adaptation", "Adjustment", "Review", "Reform", "Change"]
+            this.dataEng = ["Adapt", "Adjust", "Review", "Reform", "Change"]
             this.$emit("onEng", this.dataEng)
         },
 
         onHoanthanhtd() {
-            this.dataSend = ["Hành động thành thói quen", "Thu thập", "Cải tiến", "Kiểm soát", "Xác định", "Đạo diễn", "Hoàn thành", "Nổi trội", "Dựng",
+            this.dataSend = ["biến Hành động thành thói quen", "Thu thập", "Cải tiến", "Kiểm soát", "Xác định", "Đạo diễn", "Hoàn thành", "Nổi trội", "Dựng",
                 "Hướng dẫn", "Tháo", "Duy trì hiệu quả", "Hiển thị", "Quản lí", "Thành thạo", "Sửa chữa", "Tổ chức","Xay", "Tán", "Làm cho hoàn thiện", "Làm nóng","Thao tác thuần thục",
                 "Thao tác khéo léo","Tiến hành","Đo lường","Chỉnh sửa", "bảo trì", "lắp", "Bảo dưỡng"]
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Hoàn thành tự động"
             this.$emit("mien", this.mien)
-            this.dataEng = ["Action to Habit", "Gather", "Improve", "Control", "Determine", "Direct", "Finish", "Spot", "Build",
-                "Instructions", "Remove", "Maintain Efficiency", "Show", "Manage", "Professional", "Repair", "Organize", "Grill", "Cover", " Finishing", "Heating", "Mastering",
-                "Flex work","Proceed","Measurement","Edit","install","Maintain"]
+            this.dataEng = ["turn Action to Habit", "Gather", "Improve", "Control", "Determine", "Direct", "Finish", "Spot", "Build",
+                "Instruct", "Remove", "Maintain Efficiency", "Show", "Manage", "act Professionally", "Repair", "Organize", "Grill", "Cover", " Finish", "Heat", "Master",
+                "work flexibly","Proceed","Measure","Edit","install","Maintain"]
             this.$emit("onEng", this.dataEng)
         },
 
@@ -199,8 +199,8 @@ export default {
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Kỹ xảo"
             this.$emit("mien", this.mien)
-            this.dataEng = ["Assembly", "Prove", "Operate", "Finish", "Improve", "Accelerate", "Speed ​​Control",
-                "Assign", "Practice", "Shaping","Maintenance","Maintenance","Disassembly"]
+            this.dataEng = ["Assemble", "Prove", "Operate", "Finish", "Improve", "Accelerate", "Control Speed ",
+                "Assign", "Practice", "Shape","Maintain","Disassemble"]
             this.$emit("onEng", this.dataEng)
 
         },
@@ -219,7 +219,7 @@ export default {
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Thiết lập"
             this.$emit("mien", this.mien)
-            this.dataEng = ["Copy", "Clone", "Implement", "Demonstrate", "Simulate", "Instructed Operation", "Supervised Operation", "Narrator", "Test" ,
+            this.dataEng = ["Copy", "Clone", "Implement", "Demonstrate", "Simulate", "Instructively Operate", "Operate with supervision", "Narrate", "Test" ,
                  "Reply"]
             this.$emit("onEng", this.dataEng)
 
@@ -231,8 +231,8 @@ export default {
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Nhận thức"
             this.$emit("mien", this.mien)
-            this.dataEng = ["Attention", "Detect", "Listen", "Describe", "Hear", "Distinguish", "Feel", "Feel",
-                "Realize", "Consider", "Separate", "Aware", "Observation", "Choose"]
+            this.dataEng = ["Attend to", "Detect", "Listen", "Describe", "Hear", "Distinguish", "Feel", "Feel",
+                "Realize", "Consider", "Separate", "Be Aware", "Observe", "Choose"]
             this.$emit("onEng", this.dataEng)
         },
         //Mien thai do
@@ -242,8 +242,8 @@ export default {
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Cá nhân hóa"
             this.$emit("mien", this.mien)
-            this.dataEng = ["Play", "Action", "Approve", "Express opinion", "Defend", "Demonstrate"," Illustrate", "Demonstrate by example", "Practical", "Dynamic Influence", "Behavior Modification", "Modify", "Dedication",
-                "Internalization", "Personalization", "Opinion", "Review", "Management", "Clarifying the problem"]
+            this.dataEng = ["Role-Play", "Act", "Approve", "Express opinion", "Defend", "Demonstrate"," Illustrate", "Demonstrate by example", "Practical", "Dynamic Influence", "Modify behavior", "Modify",
+                "Internalize", "Personalize", "Opine", "Review", "Manage", "Clarify problems"]
             this.$emit("onEng", this.dataEng)
         },
 
@@ -253,7 +253,7 @@ export default {
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Tổ chức"
             this.$emit("mien", this.mien)
-            this.dataEng = ["Organize", "Flexible", "Adapt", "Classify", "Formulate", "Discussion", "Systematize", "Synthesis", "Replace", "Combine" ,
+            this.dataEng = ["Organize", "Flex", "Adapt", "Classify", "Formulate", "Systematize", "Synthesize", "Replace", "Combine" ,
                 "Compare", "Generalize", "Integrate"]
             this.$emit("onEng", this.dataEng)
         },
@@ -263,7 +263,7 @@ export default {
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Nhìn nhận giá trị"
             this.$emit("mien", this.mien)
-            this.dataEng = ["Pledge", "Pursue", "Invite", "Recommend", "Proposal", "Support", "Share", "Dedication", "Advocate"]
+            this.dataEng = ["Pledge", "Pursue", "Invite", "Recommend", "Propose", "Support", "Share", "Dedicate", "Advocate"]
             this.$emit("onEng", this.dataEng)
         },
 
@@ -272,7 +272,7 @@ export default {
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Đáp ứng, phản hồi"
             this.$emit("mien", this.mien)
-            this.dataEng = ["Accept", "Compliance", "Practice", "Perform", "Participate", "Communicate"]
+            this.dataEng = ["Accept", "Comply", "Practice", "Perform", "Participate", "Communicate"]
             this.$emit("onEng", this.dataEng)
         },
 
@@ -281,7 +281,7 @@ export default {
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Tiếp nhận"
             this.$emit("mien", this.mien)
-            this.dataEng = ["Recognize", "Receive", "Aware"]
+            this.dataEng = ["Recognize", "Receive", "Be Aware"]
             this.$emit("onEng", this.dataEng)
         },
 
