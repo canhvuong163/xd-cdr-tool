@@ -210,8 +210,8 @@ export default {
                 "Xây dựng", "Đáp lại"]
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Phản hồi có hướng dẫn"
-            this.dataEng = ["Copy", "Clone", "Implement", "Demonstrate", "Simulate", "Instructively Operate", "Operate with supervision", "Narrate", "Test" ,
-                 "Reply"]
+            this.dataEng = ["Copy", "Duplicate", "Execute", "Represent", "Simulate", "Operate guided", "Supervised operation", "Reproduce", "Experiment" ,
+                "Construct","Reply"]
             this.$emit("mien", this.mien)
             this.$emit("onEng", this.dataEng)
 
