@@ -213,6 +213,7 @@ export default {
             this.dataEng = ["Copy", "Clone", "Implement", "Demonstrate", "Simulate", "Instructively Operate", "Operate with supervision", "Narrate", "Test" ,
                  "Reply"]
             this.$emit("mien", this.mien)
+            this.$emit("onEng", this.dataEng)
 
         },
 
