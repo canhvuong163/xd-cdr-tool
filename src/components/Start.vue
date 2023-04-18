@@ -8,7 +8,6 @@
                 <v-btn @click="onStart">Bắt đầu dự án/Start Project</v-btn>
             </div>
         </div>
-        <v-data-table></v-data-table>
     </v-app>
     
 </template>
