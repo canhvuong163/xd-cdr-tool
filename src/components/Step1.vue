@@ -209,7 +209,9 @@ export default {
             this.dataSend = ["Sao chép", "Nhân bản", "Thực hiện", "Thể hiện", "Mô phỏng", "Thao tác theo hướng dẫn", "Vận hành có giám sát", "Thuật lại", "Thử nghiệm",
                 "Xây dựng", "Đáp lại"]
             this.$emit("onGhinho", this.dataSend)
-            this.mien = "Phản hồi có hưỡng dẫn"
+            this.mien = "Phản hồi có hướng dẫn"
+            this.dataEng = ["Copy", "Clone", "Implement", "Demonstrate", "Simulate", "Instructively Operate", "Operate with supervision", "Narrate", "Test" ,
+                 "Reply"]
             this.$emit("mien", this.mien)
 
         },
@@ -219,8 +221,7 @@ export default {
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Thiết lập"
             this.$emit("mien", this.mien)
-            this.dataEng = ["Copy", "Clone", "Implement", "Demonstrate", "Simulate", "Instructively Operate", "Operate with supervision", "Narrate", "Test" ,
-                 "Reply"]
+            this.dataEng = ["Explain", "Arrange", "Start", "Move", "Prepare", "Impact", "Declare", "Volunteer", "Answer"]
             this.$emit("onEng", this.dataEng)
 
         },
@@ -347,5 +348,14 @@ export default {
 .font-white {
     color: white;
 
+}
+
+@media only screen and (max-width: 425px) {
+    .btn-back {
+        max-width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        Text-overflow: ellipsis;
+    }
 }
 </style>
