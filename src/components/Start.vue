@@ -5,7 +5,7 @@
                 <img src="../assets/img/logot.png" height="150">
                 <h1>Công cụ xây dựng chuẩn đầu ra - Learning Outcome building tool </h1>
                 <p>Bộ công cụ này hỗ trợ Quý Thầy/Cô xây dựng chuẩn đầu ra dựa trên thang đo mức độ nhận thức Bloom.</p>
-                <v-btn @click="onStart">Bắt đầu dự án/Start Project</v-btn>
+                <v-btn color="green" @click="onStart">Bắt đầu dự án/Start Project</v-btn>
             </div>
         </div>
     </v-app>
@@ -43,5 +43,11 @@ export default {
     text-align: center;
     margin-top: 150px;
     background-color: rgba(0, 183, 255, 0.377);
+}
+
+@media only screen and (max-width: 800px) {
+    .content {
+        margin-top: 0;
+    }
 }
 </style>

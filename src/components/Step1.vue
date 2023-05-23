@@ -16,7 +16,7 @@
                 <!-- <div class="step1-1"> -->
                 <img src="../assets/img/6capdomnt.png" alt="err" class="img">
                 <div class="menu-btn-st1">
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onSangtao">
+                    <v-btn color="#03989e" class="btn-back"  @click="onSangtao">
                         Sáng tạo/ Creating
                         <div class="tooltip" @mouseover="showTooltip" @mouseout="hideTooltip">
                             <img width="32" height="32" src="https://img.icons8.com/small/32/information.png"
@@ -25,7 +25,7 @@
                                 có</span>
                         </div>
                     </v-btn>
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onDanhgia">
+                    <v-btn color="#03989e" class="btn-back" @click="onDanhgia">
                         Đánh giá/ Evaluating
                         <div class="tooltip" @mouseover="showTooltip" @mouseout="hideTooltip">
                             <img width="32" height="32" src="https://img.icons8.com/small/32/information.png"
@@ -34,7 +34,7 @@
                                 các chuẩn mực, tiêu chí</span>
                         </div>
                     </v-btn>
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onPhantich">
+                    <v-btn color="#03989e" class="btn-back"  @click="onPhantich">
                         Phân tích/ Analyzing
                         <div class="tooltip" @mouseover="showTooltip" @mouseout="hideTooltip">
                             <img width="32" height="32" src="https://img.icons8.com/small/32/information.png"
@@ -43,7 +43,7 @@
                                 tới tổng thể</span>
                         </div>
                     </v-btn>
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onApdung">
+                    <v-btn color="#03989e" class="btn-back"  @click="onApdung">
                         Ứng dụng, vận dụng/ Applying
                         <div class="tooltip" @mouseover="showTooltip" @mouseout="hideTooltip">
                             <img width="32" height="32" src="https://img.icons8.com/small/32/information.png"
@@ -52,7 +52,7 @@
                                 để giúp giải quyết vấn đề</span>
                         </div>
                     </v-btn>
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onHieu">
+                    <v-btn color="#03989e" class="btn-back"  @click="onHieu">
                         Hiểu/ Understanding
                         <div class="tooltip" @mouseover="showTooltip" @mouseout="hideTooltip">
                             <img width="32" height="32" src="https://img.icons8.com/small/32/information.png"
@@ -62,8 +62,8 @@
                         </div>
                     </v-btn>
 
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onGhinho">
-                        Biết, nhớ / Remembering
+                    <v-btn color="#03989e" class="btn-back"  @click="onGhinho">
+                        Nhớ/ Remembering
                         <div class="tooltip" @mouseover="showTooltip" @mouseout="hideTooltip">
                             <img width="32" height="32" src="https://img.icons8.com/small/32/information.png"
                                 alt="information" />
@@ -90,8 +90,8 @@
                             <span class="tooltipText">Có thể nhắc lại các thông tin đã được tiếp nhận trước đó</span>
                         </div>
                     </v-btn> -->
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onHoanthanhtd">
-                        Làm thuần thục / Naturalization
+                    <v-btn color="#03989e" class="btn-back"  @click="onHoanthanhtd">
+                        Làm thuần thục/ Naturalization
                         <div class="tooltip" @mouseover="showTooltip" @mouseout="hideTooltip">
                             <img width="32" height="32" src="https://img.icons8.com/small/32/information.png"
                                 alt="information" />
@@ -99,8 +99,8 @@
                                 thành tự nhiên, không đòi hỏi sự cố gắng về trí lực và thể lực</span>
                         </div>
                     </v-btn>
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onKyxao">
-                        Phối hợp / Articulation
+                    <v-btn color="#03989e" class="btn-back"  @click="onKyxao">
+                        Phối hợp/ Articulation
                         <div class="tooltip" @mouseover="showTooltip" @mouseout="hideTooltip">
                             <img width="32" height="32" src="https://img.icons8.com/small/32/information.png"
                                 alt="information" />
@@ -108,8 +108,8 @@
                                 nhịp nhàng và ổn định</span>
                         </div>
                     </v-btn>
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onPhanhoicohd">
-                        Làm chính xác / Precision
+                    <v-btn color="#03989e" class="btn-back"  @click="onPhanhoicohd">
+                        Làm chính xác/ Precision
                         <div class="tooltip" @mouseover="showTooltip" @mouseout="hideTooltip">
                             <img width="32" height="32" src="https://img.icons8.com/small/32/information.png"
                                 alt="information" />
@@ -117,16 +117,16 @@
                                 thường thực hiện độc lập không cần phải hướng dẫn</span>
                         </div>
                     </v-btn>
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onThietlap">
-                        Làm được / Manipulation
+                    <v-btn color="#03989e" class="btn-back"  @click="onThietlap">
+                        Làm được/ Manipulation
                         <div class="tooltip" @mouseover="showTooltip" @mouseout="hideTooltip">
                             <img width="32" height="32" src="https://img.icons8.com/small/32/information.png"
                                 alt="information" />
                             <span class="tooltipText">Thể hiện qua khả năng hoàn thành một kỹ năng theo như chỉ dẫn </span>
                         </div>
                     </v-btn>
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onkienthuc">
-                        Bắt chước / Imitation
+                    <v-btn color="#03989e" class="btn-back"  @click="onkienthuc">
+                        Bắt chước/ Imitation
                         <div class="tooltip" @mouseover="showTooltip" @mouseout="hideTooltip">
                             <img width="32" height="32" src="https://img.icons8.com/small/32/information.png"
                                 alt="information" />
@@ -139,16 +139,16 @@
             <div v-if="stylemien === 'thaido'" class="step1">
                 <img src="../assets/img/6capdomtd.png" alt="err" class="img">
                 <div class="menu-btn-st1">
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onCanhanhoa">
-                        Hình thành phấm chất / Characterizing
+                    <v-btn color="#03989e" class="btn-back"  @click="onCanhanhoa">
+                        Hình thành/ Characterizing
                         <div class="tooltip" @mouseover="showTooltip" @mouseout="hideTooltip">
                             <img width="32" height="32" src="https://img.icons8.com/small/32/information.png"
                                 alt="information" />
                             <span class="tooltipText">Thể hiện khả năng tích hợp niềm tin, tư tưởng và thái độ</span>
                         </div>
                     </v-btn>
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onTochuc">
-                        Tổ chức hoặc Thiết lập / Organizing
+                    <v-btn color="#03989e" class="btn-back"  @click="onTochuc">
+                        Tổ chức/ Organizing
                         <div class="tooltip" @mouseover="showTooltip" @mouseout="hideTooltip">
                             <img width="32" height="32" src="https://img.icons8.com/small/32/information.png"
                                 alt="information" />
@@ -156,8 +156,8 @@
                                 nhận</span>
                         </div>
                     </v-btn>
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onNhangiatri">
-                        Đánh giá hoặc Nội tâm hóa / Valuing
+                    <v-btn color="#03989e" class="btn-back"  @click="onNhangiatri">
+                        Đánh giá/ Valuing
                         <div class="tooltip" @mouseover="showTooltip" @mouseout="hideTooltip">
                             <img width="32" height="32" src="https://img.icons8.com/small/32/information.png"
                                 alt="information" />
@@ -165,8 +165,8 @@
                                 thông tin, có cảm nhận tốt/xấu về thông tin</span>
                         </div>
                     </v-btn>
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onPhanhoi">
-                        Đáp ứng / Responding
+                    <v-btn color="#03989e" class="btn-back"  @click="onPhanhoi">
+                        Đáp ứng/ Responding
                         <div class="tooltip" @mouseover="showTooltip" @mouseout="hideTooltip">
                             <img width="32" height="32" src="https://img.icons8.com/small/32/information.png"
                                 alt="information" />
@@ -174,7 +174,7 @@
                                 gia</span>
                         </div>
                     </v-btn>
-                    <v-btn color="#03989e" class="btn-back" style="color: white;" @click="onTiepnhan">
+                    <v-btn color="#03989e" class="btn-back"  @click="onTiepnhan">
                         Tiếp nhận/ Receiving
                         <div class="tooltip" @mouseover="showTooltip" @mouseout="hideTooltip">
                             <img width="32" height="32" src="https://img.icons8.com/small/32/information.png"
@@ -255,10 +255,11 @@ export default {
         },
 
         onPhantich() {
-            this.dataSend = ['so sánh', 'đối chiếu', 'kiểm tra', 'lý giải', 'phân biệt bản chất', 'chỉ ra', 'phân loại',
+            this.dataSend = ['so sánh', 'phân tích','đối chiếu', 'kiểm tra', 'lý giải', 'phân biệt bản chất', 'chỉ ra', 'phân loại',
              'khám phá', 'thẩm định', 'kiểm định', 'bố trí', 'bóc tách', 'chia nhỏ', 'kết nối', 'suy luận', 'xác định', 'chẩn đoán']
-            this.dataEng = ["consider", "systematize", "outline", "study", "simplify", "analyse",
-                "divide", "classify", "compare", "chart"]
+            this.dataEng = ['Compare', 'contrast', 'Analasys','differentiate','distinguish','dissect', 'extrapolate',
+                            'investigate', 'examine', 'inspect', 'separate', 'break down', 'correlate', 'relate', 'identify', 'diagnose'
+                            ]
             this.$emit("onGhinho", this.dataSend)
             this.$emit("onEng", this.dataEng)
             this.mien = "Phân tích/ Analyzing"
@@ -266,7 +267,7 @@ export default {
         },
 
         onApdung() {
-            this.dataSend = ['áp dụng', 'vận dụng', 'sử dụng', 'tính toán', 'kiểm tra', 'chứng minh', 'suy luận', 'phân biệt', 'giải quyết vấn đề trong tình huống mới', 'thay đổi',
+            this.dataSend = ['áp dụng', 'vận dụng', 'sử dụng', 'tính toán', 'kiểm tra', 'chứng minh', 'suy luận', 'phân biệt', 'giải quyết', 'thay đổi',
                 'hoàn tất', 'phát triển', 'phát hiện', 'khai thác', 'thực hành', 'thực nghiệm', 'điều chỉnh', 'điều khiển', 'vận hành', 'tổ chức', 'tạo ra', 'lập kế hoạch', 'xây dựng lịch trình', 'trình diễn', 'phác họa', 'dự đoán']
             this.dataEng = ['Apply', 'use', 'utilize', 'employ', 'calculate', 'compute', 'extrapolate', 'compare', 'solve', 'change', 'complete', 'discover',
                 'demonstrate', 'illustrate', 'practice', 'experiment', 'modify', 'execute', 'implement', 'manipulate', 'operate', 'schedule', 'predict']
@@ -291,7 +292,7 @@ export default {
             this.dataSend = ["mô tả", "gọi tên", "liệt kê", "nhận diện", "xác định", "định nghĩa", "trình bày",
                 "tường thuật", "trích dẫn", "nhắc lại", "kể lại", "tái tạo", "mô phỏng"]
             this.$emit("onGhinho", this.dataSend)
-            this.mien = "Biết, nhớ/ Remembering"
+            this.mien = "Nhớ/ Remembering"
             this.$emit("mien", this.mien)
             this.dataEng = ["Describe", "name", "list", "define", "find", "identify",
                 "label", "match", "recognize", "state", "recite", 'recall',
@@ -348,7 +349,7 @@ export default {
 
         onPhanhoicohd() {
             this.dataSend = ['kiểm tra', 'sáng tác', 'làm, thực hiện', 'hoàn thiện', 'điều khiển', 'kiểm soát', 'trình diễn',
-             'sử dụng/làm thành thạo', 'chỉ rõ', 'phân biệt', 'xây dựng', 'tích hợp', 'phán đoán', 'lựa chọn', 'tổng hợp']
+             'sử dụng', 'chỉ rõ', 'phân biệt', 'lập công thức', 'tích hợp', 'phán đoán', 'lựa chọn', 'tổng hợp']
             this.dataEng = ['Calibrate', 'compose', 'perform', 'complete', 'control', 'demonstrate', 'execute', 'master', 'perfect',  'show',
              'distinguish', 'formulate', 'integrate', 'judge', 'perceive', 'select','synthesize']
             this.$emit("onGhinho", this.dataSend)
@@ -385,7 +386,7 @@ export default {
             this.dataSend = ['Thực hiện', 'biểu lộ', 'biện hộ', 'ảnh hưởng', 'đề xuất', 'đại diện', 'kiểu mẫu', 'xác nhận giá trị', 'biện giải',
              'thôi thúc', 'duy trì', 'gìn giữ', 'kiên nhẫn', 'ủng hộ', 'cống hiến', 'đặc trưng cho tính cách']
             this.$emit("onGhinho", this.dataSend)
-            this.mien = "Hình thành phấm chất/ Characterizing"
+            this.mien = "Hình thành/ Characterizing"
             this.$emit("mien", this.mien)
             this.dataEng = ['act', 'perform', 'display', 'practice','advocate', 'influence', 'propose',
                 'embody', 'represent', 'pattern', 'exemplify', 'validate', 'defend', 'justify', 'encourgage', 'maintain',
@@ -427,7 +428,7 @@ export default {
         },
 
         onTiepnhan() {
-            this.dataSend = ['Công nhận', 'nhận biết', 'chấp nhận', 'ý thức được', 'hỏi, để ý', 'mô tả', 'quan sát',
+            this.dataSend = ['Công nhận', 'nhận biết', 'chấp nhận', 'ý thức được', 'hỏi', 'để ý', 'mô tả', 'quan sát',
              'tuân thủ', 'nhận định', 'lắng nghe', 'nhìn nhận']
             this.$emit("onGhinho", this.dataSend)
             this.mien = "Tiếp nhận/ Receiving"
@@ -456,7 +457,6 @@ export default {
     height: auto;
     margin-top: 20px;
     margin-right: auto;
-    flex-wrap: wrap;
 }
 
 .btn-back-1 {
@@ -480,9 +480,9 @@ export default {
     } */
 
 .menu-btn-st1 {
-    display: grid;
     background-color: white;
-
+    display: grid;
+    width: 100%;
 }
 
 .menu-btn {
@@ -530,12 +530,25 @@ export default {
     opacity: 1;
 }
 
+.v-btn__content {
+    color: white;
+}
 
-@media only screen and (max-width: 425px) {
-    .btn-back {
-        max-width: 100%;
-        white-space: nowrap;
-        overflow: hidden;
-        Text-overflow: ellipsis;
+
+@media only screen and (max-width: 800px) {
+    .step1 {
+        display: block;
+        text-align: center;
     }
-}</style>
+
+    .img {
+        max-width: 100%;
+    }
+
+    .v-btn__content{
+        font-size: 10px;
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+}
+</style>
