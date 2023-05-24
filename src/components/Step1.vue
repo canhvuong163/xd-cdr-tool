@@ -482,7 +482,6 @@ export default {
 .menu-btn-st1 {
     background-color: white;
     display: grid;
-    width: 100%;
 }
 
 .menu-btn {
